@@ -72,7 +72,7 @@ def _parse_itens(text):
 
 def _ocr_imagem(img_bytes, mt):
     b64 = base64.standard_b64encode(img_bytes).decode()
-    msg = claude.messages.create(model="claude-sonnet-4-20250514", max_tokens=1000,
+    msg = claude.messages.create(model="claude-sonnet-4-6", max_tokens=1000,
         messages=[{"role": "user", "content": [
             {"type": "image", "source": {"type": "base64", "media_type": mt, "data": b64}},
             {"type": "text", "text": f"Extraia todos os itens deste orçamento.\n{_JSON_INSTRUCAO}"},
@@ -80,7 +80,7 @@ def _ocr_imagem(img_bytes, mt):
     return _parse_itens(msg.content[0].text)
 
 def _extrair_texto(texto):
-    msg = claude.messages.create(model="claude-sonnet-4-20250514", max_tokens=1000,
+    msg = claude.messages.create(model="claude-sonnet-4-6", max_tokens=1000,
         messages=[{"role": "user", "content": f"Extraia os itens do orçamento.\n{_JSON_INSTRUCAO}\n\n{texto}"}])
     return _parse_itens(msg.content[0].text)
 
@@ -104,7 +104,7 @@ def _analisar(orcamentos):
         "Inclua: *Resumo* (totais e %), *Item a item*, *Pontos de atenção*, *Recomendação*.\n"
         "Seja direto. Máximo ~900 caracteres."
     )
-    msg = claude.messages.create(model="claude-sonnet-4-20250514", max_tokens=1200,
+    msg = claude.messages.create(model="claude-sonnet-4-6", max_tokens=1200,
         messages=[{"role": "user", "content": prompt}])
     return msg.content[0].text.strip()
 

@@ -6,7 +6,7 @@ Claude Vision extrai os itens e Claude gera análise comparativa. SaaS com plano
 (3 comparações/mês) e pago (R$19/mês, ilimitado).
 
 ## Stack
-- FastAPI + Uvicorn | Twilio WhatsApp | Anthropic API (claude-sonnet-4-20250514) | PostgreSQL Railway
+- FastAPI + Uvicorn | Twilio WhatsApp | Anthropic API (claude-sonnet-4-6) | PostgreSQL Railway
 - Deploy: Railway — start command: uvicorn main:app --host 0.0.0.0 --port $PORT
 
 ## Arquivos
@@ -28,7 +28,7 @@ Sessões isoladas por telefone, TTL 60min, máximo 5 orçamentos, mínimo 2 para
 - Sempre validar: python3 -m py_compile main.py comparador_orcamentos.py database.py
 - Commits: vX.Y: descrição breve
 - Mensagens WhatsApp: *negrito*, _itálico_, máx 1500 chars (função _dividir cuida disso)
-- Modelo sempre: claude-sonnet-4-20250514
+- Modelo sempre: claude-sonnet-4-6
 
 ## Próximas features
 - [ ] Landing page de vendas
