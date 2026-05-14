@@ -7,6 +7,7 @@ Deploy: Railway (Python, porta via $PORT)
 
 import os
 from fastapi import FastAPI, Request, Response
+from fastapi.responses import JSONResponse
 from twilio.rest import Client as TwilioClient
 
 import database as db
@@ -56,12 +57,12 @@ async def webhook(request: Request):
 async def ativar_pago(request: Request):
     data   = await request.json()
     secret = os.environ.get("ADMIN_SECRET", "")
-    if data.get("secret") != secret:
-        return {"error": "não autorizado"}, 403
+    if not secret or data.get("secret") != secret:
+        return JSONResponse(status_code=403, content={"error": "não autorizado"})
 
     phone = data.get("phone", "").replace("whatsapp:", "").strip()
     if not phone:
-        return {"error": "phone obrigatório"}
+        return JSONResponse(status_code=400, content={"error": "phone obrigatório"})
 
     db.ativar_plano_pago(phone)
     return {"ok": True, "phone": phone, "plano": "pago"}

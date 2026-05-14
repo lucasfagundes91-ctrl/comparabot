@@ -12,15 +12,11 @@ import json
 import base64
 import requests
 import anthropic
-from datetime import datetime, timedelta
 from typing import Optional
 
 import database as db
 
 claude = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
-
-_sessions: dict = {}
-SESSION_TTL = 60
 
 RE_ATIVAR   = re.compile(r"\b(compar|or[çc]amento|or[çc]ar|mais barato|melhor pre[çc]o|cot[ao])\b", re.I)
 RE_ANALISAR = re.compile(r"\b(anali[sz]|comparar|compara|decide|qual (escolho|compro|levo)|ver (an[aá]lise|resultado))\b", re.I)
@@ -33,22 +29,18 @@ LINK_PAGAMENTO = os.environ.get("LINK_PAGAMENTO", "https://seusite.com/assinar")
 
 
 def _session(phone):
-    _purge()
-    if phone not in _sessions:
-        _sessions[phone] = {"state": "idle", "orcamentos": [], "updated_at": datetime.now()}
-    return _sessions[phone]
+    """Sessão persistida no Postgres — sobrevive a restart/redeploy do Railway.
+    Retorna a sessão salva, ou uma transitória 'idle' (só vai pro banco no _save)."""
+    s = db.get_sessao(phone)
+    if s is None:
+        return {"state": "idle", "orcamentos": []}
+    return s
 
 def _save(phone, s):
-    s["updated_at"] = datetime.now()
-    _sessions[phone] = s
+    db.salvar_sessao(phone, s["state"], s["orcamentos"])
 
 def _reset(phone):
-    _sessions[phone] = {"state": "idle", "orcamentos": [], "updated_at": datetime.now()}
-
-def _purge():
-    cutoff = datetime.now() - timedelta(minutes=SESSION_TTL)
-    for p in [k for k, v in _sessions.items() if v.get("updated_at", cutoff) < cutoff]:
-        del _sessions[p]
+    db.deletar_sessao(phone)
 
 
 def _baixar_midia(url):
