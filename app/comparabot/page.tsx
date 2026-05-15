@@ -135,7 +135,7 @@ export default function ComparaBot() {
       <section id="planos" className="mx-auto max-w-5xl px-6 py-20">
         <h2 className="text-center text-3xl font-bold sm:text-4xl">Planos</h2>
         <p className="mt-3 text-center text-neutral-400">
-          Comece grátis. Assine quando precisar de mais.
+          Comece grátis. Assine quando precisar de mais — ou ganhe junto com outro sistema Luquisys.
         </p>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
@@ -189,6 +189,28 @@ export default function ComparaBot() {
             >
               Assinar Pro
             </a>
+          </div>
+        </div>
+
+        <div className="mt-8 rounded-2xl border border-gold-dim bg-gradient-to-br from-gold-dark/40 to-bg-card p-8 shadow-gold">
+          <div className="flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex-1">
+              <span className="inline-block rounded-full border border-gold-dim/60 bg-gold-dark/30 px-3 py-1 text-xs font-bold tracking-wider text-gold">
+                BÔNUS LUQUISYS
+              </span>
+              <h3 className="mt-4 text-2xl font-bold text-white sm:text-3xl">
+                Grátis pra clientes Luquisys
+              </h3>
+              <p className="mt-3 max-w-xl text-sm leading-relaxed text-neutral-300 sm:text-base">
+                Assinando <strong className="text-gold">qualquer outro sistema da Luquisys</strong> (BankPro, LuquiPDV, FarmPro, ObrasPro, PontoPro e outros), o <strong className="text-white">ComparaBot Pro vem incluso sem custo extra</strong> — comparações ilimitadas no WhatsApp.
+              </p>
+            </div>
+            <Link
+              href="/#produtos"
+              className="shrink-0 rounded-full bg-gold px-7 py-3 text-sm font-semibold text-bg transition hover:bg-gold-bright"
+            >
+              Ver sistemas Luquisys
+            </Link>
           </div>
         </div>
       </section>
