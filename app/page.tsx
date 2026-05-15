@@ -67,7 +67,7 @@ const trilhas: Trilha[] = [
         nome: "FrotaPro",
         icone: "🚚",
         tagline: "Gestão de frota PME com IPVA, seguro e manutenção",
-        preco: "R$ 39 + R$ 8/veículo",
+        preco: "R$ 49",
         badge: "novo",
       },
     ],
@@ -162,7 +162,7 @@ const bundles = [
     inclui: "ObraPro + AluguelPro + FrotaPro + ComparaBot",
     publico: "Constrói, aluga e tem veículos",
     preco: "R$ 227",
-    economia: "+ R$ 8/veículo · Economia ~R$ 30",
+    economia: "Economia ~R$ 40/mês",
   },
   {
     nome: "Combo Pessoal",

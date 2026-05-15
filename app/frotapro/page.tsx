@@ -59,23 +59,22 @@ export default function FrotaProPage() {
         {
           nome: "FrotaPro",
           publico: "Gestão completa da frota",
-          precoLabel: "R$ 39 + R$ 8/veículo",
+          precoLabel: "R$ 49",
           features: [
             "Plataforma + assistente IA",
-            "Veículos ilimitados (R$ 8 cada/mês)",
+            "Veículos ilimitados",
             "Usuários ilimitados",
             "OCR de comprovante",
             "Lembretes automáticos",
             "Relatórios e dashboards",
             "Suporte prioritário",
           ],
-          ctaLabel: "Falar com vendas",
+          ctaLabel: "Assinar agora",
           ctaHref:
             "mailto:contato@luquisys.com.br?subject=Quero%20o%20FrotaPro",
           destaque: true,
         },
       ]}
-      rodapeHero="A partir de R$ 39/mês (plataforma) + R$ 8/veículo."
       ctaFinalTitulo="Frota no controle, sem planilha"
       ctaFinalTexto="Você sabe quanto cada veículo está custando por KM rodado?"
     />
