@@ -51,48 +51,78 @@ def _baixar_midia(url):
 
 
 _JSON_INSTRUCAO = (
-    "Retorne APENAS um array JSON puro, sem texto, sem markdown:\n"
-    '[{"descricao":"nome","qtd":1,"unidade":"un","preco":0.00}]\n'
-    "Use ponto como decimal. Extraia TODOS os itens visíveis."
+    "Retorne APENAS um array JSON puro, sem texto e sem markdown:\n"
+    '[{"descricao":"nome do item","qtd":1,"unidade":"un","preco":0.00,"total":0.00}]\n\n'
+    "REGRAS (siga à risca):\n"
+    "1. preco = PREÇO UNITÁRIO do item — coluna 'P.Unit.', 'Preço Unl', 'Vl.Unit', "
+    "'Unitário' ou similar. NUNCA use a coluna de total da linha como preco.\n"
+    "2. total = TOTAL DA LINHA do item — coluna 'Total', 'Vl.Total', 'Subtotal'.\n"
+    "3. qtd = quantidade do item — coluna 'Qtd', 'Qtde', 'Qtd.Ped', 'Qtde'.\n"
+    "4. Números estão em formato brasileiro: PONTO separa milhar, VÍRGULA separa decimal. "
+    'Converta para ponto decimal. Ex: "1.293,60"->1293.60 ; "16.360,00"->16360.00 ; '
+    '"40,90"->40.90 ; "5,2685"->5.2685.\n'
+    "5. Extraia TODOS os itens de produto. IGNORE linhas de frete, desconto, impostos "
+    "e total geral do orçamento.\n"
+    '6. Se algum campo faltar: qtd=1, unidade="un", e total = qtd*preco.'
 )
 
 def _parse_itens(text):
-    m = re.search(r"\[[\s\S]*?\]", text)
+    m = re.search(r"\[[\s\S]*\]", text)
     if not m:
         return []
     try:
         data = json.loads(m.group())
-        return [{"descricao": str(it.get("descricao") or it.get("nome") or ""),
-                 "qtd": float(it.get("qtd") or 1),
-                 "unidade": str(it.get("unidade") or "un"),
-                 "preco": float(it.get("preco") or it.get("valor") or 0)}
-                for it in data if isinstance(it, dict)]
     except Exception:
         return []
+    itens = []
+    for it in data:
+        if not isinstance(it, dict):
+            continue
+        qtd   = float(it.get("qtd") or 1)
+        preco = float(it.get("preco") or it.get("valor") or 0)
+        total = float(it.get("total") or 0) or (qtd * preco)
+        itens.append({
+            "descricao": str(it.get("descricao") or it.get("nome") or ""),
+            "qtd": qtd,
+            "unidade": str(it.get("unidade") or "un"),
+            "preco": preco,
+            "total": total,
+        })
+    return itens
 
 def _ocr_imagem(img_bytes, mt):
     b64 = base64.standard_b64encode(img_bytes).decode()
-    msg = claude.messages.create(model="claude-sonnet-4-6", max_tokens=1000,
+    msg = claude.messages.create(model="claude-sonnet-4-6", max_tokens=1500,
         messages=[{"role": "user", "content": [
             {"type": "image", "source": {"type": "base64", "media_type": mt, "data": b64}},
             {"type": "text", "text": f"Extraia todos os itens deste orçamento.\n{_JSON_INSTRUCAO}"},
         ]}])
-    return _parse_itens(msg.content[0].text)
+    itens = _parse_itens(msg.content[0].text)
+    print(f"[OCR imagem] {len(itens)} itens: {itens}")
+    return itens
 
 def _extrair_texto(texto):
-    msg = claude.messages.create(model="claude-sonnet-4-6", max_tokens=1000,
+    msg = claude.messages.create(model="claude-sonnet-4-6", max_tokens=1500,
         messages=[{"role": "user", "content": f"Extraia os itens do orçamento.\n{_JSON_INSTRUCAO}\n\n{texto}"}])
-    return _parse_itens(msg.content[0].text)
+    itens = _parse_itens(msg.content[0].text)
+    print(f"[OCR texto] {len(itens)} itens: {itens}")
+    return itens
 
 
 def _fmt_brl(n):
     return f"R$ {n:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
 
+def _item_total(it):
+    """Total da linha extraído do documento; cai pra qtd*preco se faltar."""
+    return it.get("total") or (it["qtd"] * it["preco"])
+
+def _orc_total(orc):
+    return sum(_item_total(it) for it in orc["itens"])
+
 def _bloco_orc(orc):
-    total = sum(it["qtd"] * it["preco"] for it in orc["itens"])
-    linhas = [f"## {orc['nome']} — Total: {_fmt_brl(total)}"]
+    linhas = [f"## {orc['nome']} — Total: {_fmt_brl(_orc_total(orc))}"]
     for it in orc["itens"]:
-        linhas.append(f"- {it['descricao']}: {it['qtd']} {it['unidade']} × {_fmt_brl(it['preco'])} = {_fmt_brl(it['qtd']*it['preco'])}")
+        linhas.append(f"- {it['descricao']}: {it['qtd']} {it['unidade']} × {_fmt_brl(it['preco'])} = {_fmt_brl(_item_total(it))}")
     return "\n".join(linhas)
 
 def _analisar(orcamentos):
@@ -179,7 +209,7 @@ def handle(phone, body, media_url=None, media_type=None, num_media=0):
             except Exception as e:
                 return f"Erro ao gerar análise: {e}"
             db.incrementar_comparacao(phone)
-            resumos = "\n".join(f"  {i+1}. *{o['nome']}* — {_fmt_brl(sum(it['qtd']*it['preco'] for it in o['itens']))}"
+            resumos = "\n".join(f"  {i+1}. *{o['nome']}* — {_fmt_brl(_orc_total(o))}"
                                 for i, o in enumerate(s["orcamentos"]))
             resposta = f"📊 *Comparativo de Orçamentos*\n\n{resumos}\n\n{analise}\n\n_Digite *novo* para comparar outros orçamentos._"
             _reset(phone)
@@ -221,7 +251,7 @@ def _salvar_orc(phone, s, itens):
     s["orcamentos"].append({"nome": nome, "itens": itens})
     s["state"] = "coletando"
     _save(phone, s)
-    total = sum(it["qtd"] * it["preco"] for it in itens)
+    total = sum(_item_total(it) for it in itens)
     preview = "\n".join(f"  • {it['descricao']}: {it['qtd']} {it['unidade']} · {_fmt_brl(it['preco'])}" for it in itens[:4])
     mais = f"\n  _(...+{len(itens)-4} itens)_" if len(itens) > 4 else ""
     return (f"✅ *{nome} salvo!* ({len(itens)} item(s) · {_fmt_brl(total)})\n\n"
