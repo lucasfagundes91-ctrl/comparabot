@@ -13,7 +13,7 @@ from twilio.rest import Client as TwilioClient
 import database as db
 import comparador_orcamentos as bot
 
-app = FastAPI(title="ComparaBot WhatsApp")
+app = FastAPI(title="ComparaBot — Luquisys")
 
 twilio       = TwilioClient(os.environ["TWILIO_ACCOUNT_SID"], os.environ["TWILIO_AUTH_TOKEN"])
 NUMERO_FROM  = os.environ["TWILIO_WHATSAPP_NUMBER"]
@@ -27,7 +27,7 @@ def startup():
 
 @app.get("/")
 def health():
-    return {"status": "ok", "app": "ComparaBot"}
+    return {"status": "ok", "app": "ComparaBot", "by": "Luquisys", "site": "https://luquisys.com.br/comparabot"}
 
 
 @app.post("/webhook/whatsapp")
