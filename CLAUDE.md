@@ -5,6 +5,11 @@ Bot de WhatsApp que compara orçamentos. Usuário manda fotos ou textos de 2 a 5
 Claude Vision extrai os itens e Claude gera análise comparativa. SaaS com plano free
 (3 comparações/mês) e pago (R$19/mês, ilimitado).
 
+## Marca
+ComparaBot é o primeiro produto sob a marca-guarda-chuva *Luquisys — Sistemas de Gestão*.
+Domínio institucional: luquisys.com.br. URL do produto: luquisys.com.br/comparabot.
+Novos produtos seguem o mesmo padrão (luquisys.com.br/<produto>).
+
 ## Stack
 - FastAPI + Uvicorn | Twilio WhatsApp | Anthropic API (claude-sonnet-4-6) | PostgreSQL Railway
 - Deploy: Railway — start command: uvicorn main:app --host 0.0.0.0 --port $PORT
@@ -31,7 +36,7 @@ Sessões isoladas por telefone, TTL 60min, máximo 5 orçamentos, mínimo 2 para
 - Modelo sempre: claude-sonnet-4-6
 
 ## Próximas features
-- [ ] Landing page de vendas
+- [ ] Landing page Luquisys (luquisys.com.br) + página do produto (luquisys.com.br/comparabot)
 - [ ] Webhook de pagamento automático (Stripe/Hotmart → /admin/ativar-pago)
 - [ ] Histórico de comparações por usuário
 - [ ] Nomear fornecedores no chat

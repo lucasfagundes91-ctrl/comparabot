@@ -25,7 +25,7 @@ RE_NOVO     = re.compile(r"\b(novo|recomeç|de novo|outra vez|reinicia)\b", re.I
 RE_AJUDA    = re.compile(r"\b(ajuda|help|como (usa|funciona)|oi|ol[aá]|bom dia|boa tarde|boa noite)\b", re.I)
 RE_ASSINAR  = re.compile(r"\b(assinar|plano|pagar|upgrade|liberar|quero (mais|pago))\b", re.I)
 
-LINK_PAGAMENTO = os.environ.get("LINK_PAGAMENTO", "https://seusite.com/assinar")
+LINK_PAGAMENTO = os.environ.get("LINK_PAGAMENTO", "https://luquisys.com.br/comparabot/assinar")
 
 
 def _session(phone):
@@ -188,9 +188,10 @@ def _analisar(orcamentos):
 
 
 MSG_BOAS_VINDAS = (
-    "👋 Olá! Sou o *ComparaBot* — comparo orçamentos pra você na hora.\n\n"
+    "👋 Olá! Sou o *ComparaBot* da *Luquisys* — comparo orçamentos pra você na hora.\n\n"
     "📋 Me manda a *foto* ou o *texto* do primeiro orçamento.\n\n"
-    "_Plano gratuito: {restantes} comparação(ões) disponível(eis) este mês._"
+    "_Plano gratuito: {restantes} comparação(ões) disponível(eis) este mês._\n"
+    "_Saiba mais: luquisys.com.br/comparabot_"
 )
 MSG_LIMITE = (
     "⚠️ Você atingiu o limite de *{limite} comparações gratuitas* este mês.\n\n"
