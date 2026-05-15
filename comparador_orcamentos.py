@@ -163,16 +163,26 @@ def _bloco_orc(orc):
 def _analisar(orcamentos):
     bloco = "\n\n".join(_bloco_orc(o) for o in orcamentos)
     prompt = (
-        "Você é especialista em análise de orçamentos. Compare os abaixo em português, "
-        "formatado para WhatsApp (*negrito*, emojis, listas com traço).\n\n"
+        "Você é especialista em compras. Analise os orçamentos abaixo e responda "
+        "em português, formatado para WhatsApp (*negrito*, emojis, listas com traço).\n\n"
         f"{bloco}\n\n"
-        "O 'Total final' de cada orçamento já considera frete, outras despesas e desconto — "
-        "use ele para a comparação final.\n"
-        "Inclua: *Resumo* (totais finais e % de diferença), *Item a item*, "
-        "*Pontos de atenção* (ex: frete alto, desconto, itens faltando), *Recomendação*.\n"
-        "Seja direto. Máximo ~900 caracteres."
+        "Instruções:\n"
+        "- O 'Total final' de cada orçamento já inclui frete, despesas e desconto.\n"
+        "- O mesmo produto aparece com nomes diferentes entre fornecedores "
+        "(ex: 'FERRO CA-50 10mm' = 'VERGALHAO CA50 10MM') — agrupe-os.\n"
+        "- Cuidado com unidades diferentes (preço por barra vs por kg): só compare "
+        "preços na mesma unidade; se não der pra comparar um item, avise.\n\n"
+        "Estruture a resposta EXATAMENTE assim:\n"
+        "*📊 Resumo* — total final de cada fornecedor e a diferença em R$ e %.\n"
+        "*🔎 Item a item* — para cada produto, diga qual fornecedor está mais barato "
+        "e por quanto. Marque o vencedor de cada item com ✅.\n"
+        "*🛒 Melhor combinação* — comprando cada item no fornecedor mais barato, "
+        "qual o total e quanto economiza vs fechar tudo num só lugar.\n"
+        "*⚠️ Atenção* — frete alto, desconto, item faltando, unidade incompatível.\n"
+        "*🏆 Recomendação* — veredito direto: fechar tudo com quem, ou se vale dividir.\n\n"
+        "Seja objetivo. Máximo ~1400 caracteres."
     )
-    msg = claude.messages.create(model="claude-sonnet-4-6", max_tokens=1200,
+    msg = claude.messages.create(model="claude-sonnet-4-6", max_tokens=1500,
         messages=[{"role": "user", "content": prompt}])
     return msg.content[0].text.strip()
 
