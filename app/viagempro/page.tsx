@@ -59,8 +59,7 @@ export default function ViagemProPage() {
         {
           nome: "ViagemPro",
           publico: "Viagens e roteiros ilimitados",
-          precoLabel: "R$ 29",
-          precoDe: "R$ 39",
+          precoLabel: "R$ 49",
           features: [
             "Viagens ilimitadas",
             "Roteiros gerados por IA",

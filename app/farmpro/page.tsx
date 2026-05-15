@@ -59,8 +59,7 @@ export default function FarmProPage() {
         {
           nome: "FarmPro",
           publico: "Gestão completa pro produtor rural",
-          precoLabel: "R$ 79",
-          precoDe: "R$ 99",
+          precoLabel: "R$ 119",
           features: [
             "Talhões e culturas ilimitados",
             "OCR de notas ilimitado",

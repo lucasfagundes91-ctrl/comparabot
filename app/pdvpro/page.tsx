@@ -62,8 +62,7 @@ export default function PDVProPage() {
         {
           nome: "PDV Pro",
           publico: "PDV + ERP + WhatsApp com IA",
-          precoLabel: "R$ 97",
-          precoDe: "R$ 129",
+          precoLabel: "R$ 199",
           features: [
             "13 módulos completos",
             "Usuários ilimitados",

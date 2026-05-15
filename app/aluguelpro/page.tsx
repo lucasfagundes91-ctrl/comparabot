@@ -59,8 +59,7 @@ export default function AluguelProPage() {
         {
           nome: "AluguelPro",
           publico: "Administração de imóveis",
-          precoLabel: "R$ 79",
-          precoDe: "R$ 99",
+          precoLabel: "R$ 99",
           features: [
             "Imóveis e contratos ilimitados",
             "Cobrança recorrente",

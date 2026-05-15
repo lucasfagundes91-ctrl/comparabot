@@ -244,7 +244,7 @@ export function ProductLayout({
                   <strong className="text-white">
                     você ganha o ComparaBot Pro
                   </strong>{" "}
-                  (R$ 19/mês) <strong className="text-gold">de graça</strong>{" "}
+                  (R$ 9/mês) <strong className="text-gold">de graça</strong>{" "}
                   — comparações ilimitadas no WhatsApp.
                 </p>
               </div>

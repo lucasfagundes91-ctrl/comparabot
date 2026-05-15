@@ -60,11 +60,11 @@ export default function PontoProPage() {
         {
           nome: "PontoPro",
           publico: "Conformidade total Portaria 671",
-          precoLabel: "R$ 49 + R$ 6/func",
+          precoLabel: "R$ 49 até 20 func",
           features: [
             "Plataforma multi-tenant",
-            "Até 5 funcionários inclusos",
-            "Funcionários extras: R$ 6/mês cada",
+            "Até 20 funcionários inclusos no plano base",
+            "Funcionários extras: R$ 5/mês cada",
             "AFD, AEJ, ATTR (PAdES)",
             "Selfie + GPS",
             "Banco de horas + ajustes",
@@ -76,7 +76,7 @@ export default function PontoProPage() {
           destaque: true,
         },
       ]}
-      rodapeHero="R$ 49 base (até 5 func) + R$ 6 por funcionário extra. Sem fidelidade."
+      rodapeHero="R$ 49 base (até 20 func) + R$ 5 por funcionário extra. Sem fidelidade."
       ctaFinalTitulo="Ponto eletrônico sem dor de cabeça"
       ctaFinalTexto="Fiscalização do trabalho não vai te pegar de surpresa."
     />

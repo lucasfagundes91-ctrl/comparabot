@@ -61,8 +61,7 @@ export default function MilhasProPage() {
         {
           nome: "MilhasPro",
           publico: "Buscas ilimitadas + alertas",
-          precoLabel: "R$ 29",
-          precoDe: "R$ 39",
+          precoLabel: "R$ 49",
           features: [
             "Buscas ilimitadas Smiles + TudoAzul",
             "Carteira de milhas com alerta de vencimento",

@@ -195,7 +195,7 @@ MSG_BOAS_VINDAS = (
 )
 MSG_LIMITE = (
     "⚠️ Você atingiu o limite de *{limite} comparações gratuitas* este mês.\n\n"
-    "Para continuar, assine por *R$ 19/mês*:\n"
+    "Para continuar, assine por *R$ 9/mês*:\n"
     f"👉 {LINK_PAGAMENTO}\n\n"
     "💡 *Dica:* o ComparaBot Pro vem *grátis* pra quem assina qualquer outro sistema da Luquisys (BankPro, LuquiPDV, FarmPro, etc).\n"
     "_Conheça: luquisys.com.br_\n\n"
@@ -207,7 +207,7 @@ MSG_LIMITE_5    = "Já tenho 5 orçamentos — máximo! Digite *analisar* para c
 MSG_ERRO_IMAGEM = "Não consegui ler a imagem. 😕 Tenta uma foto mais nítida, ou digita os itens:\n_5 sacos cimento R$35 cada_"
 MSG_ERRO_TEXTO  = "Não consegui identificar itens. 🤔\nEx: _Cimento 5 sacos R$35 cada_"
 MSG_ASSINAR     = (
-    f"Para assinar o plano ilimitado por *R$ 19/mês*:\n👉 {LINK_PAGAMENTO}\n\n"
+    f"Para assinar o plano ilimitado por *R$ 9/mês*:\n👉 {LINK_PAGAMENTO}\n\n"
     "💡 Ou ganhe *grátis* assinando qualquer outro sistema Luquisys (BankPro, LuquiPDV, FarmPro, etc): luquisys.com.br"
 )
 

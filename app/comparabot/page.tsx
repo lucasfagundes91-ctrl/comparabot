@@ -172,7 +172,7 @@ export default function ComparaBot() {
               Pra quem compara toda semana
             </p>
             <p className="mt-6 text-4xl font-black">
-              R$ 19<span className="text-base font-medium text-neutral-500">/mês</span>
+              R$ 9<span className="text-base font-medium text-neutral-500">/mês</span>
             </p>
             <ul className="mt-6 space-y-2 text-sm text-neutral-300">
               <li>✓ Comparações <strong className="text-white">ilimitadas</strong></li>
