@@ -5,9 +5,9 @@ __pycache__/
 .DS_Store
 
 # Next.js / landing
-landing/node_modules/
-landing/.next/
-landing/out/
-landing/.vercel/
-landing/.env*.local
-landing/next-env.d.ts
+node_modules/
+.next/
+out/
+.vercel/
+.env*.local
+next-env.d.ts

@@ -11,13 +11,24 @@ Domínio institucional: luquisys.com.br. URL do produto: luquisys.com.br/compara
 Novos produtos seguem o mesmo padrão (luquisys.com.br/<produto>).
 
 ## Stack
-- FastAPI + Uvicorn | Twilio WhatsApp | Anthropic API (claude-sonnet-4-6) | PostgreSQL Railway
-- Deploy: Railway — start command: uvicorn main:app --host 0.0.0.0 --port $PORT
+- **Backend (bot):** FastAPI + Uvicorn | Twilio WhatsApp | Anthropic (claude-sonnet-4-6) | PostgreSQL — deploy Railway
+- **Landing (web):** Next.js 15 + React 19 + Tailwind — deploy Vercel
+- Mesmo repo, separação por arquivos. Vercel usa `.vercelignore` pra ignorar Python; Railway usa NIXPACKS que ignora Next.js automaticamente.
 
 ## Arquivos
-- main.py — FastAPI, webhook Twilio, endpoint /admin/ativar-pago
-- comparador_orcamentos.py — lógica do bot: sessões, OCR, análise
-- database.py — PostgreSQL: tabelas usuarios_bot e uso_mensal
+### Backend (Railway)
+- `main.py` — FastAPI, webhook Twilio, endpoint /admin/ativar-pago
+- `comparador_orcamentos.py` — lógica do bot: sessões, OCR, análise
+- `database.py` — PostgreSQL: tabelas usuarios_bot e uso_mensal
+- `railway.json` — start command: `uvicorn main:app --host 0.0.0.0 --port $PORT`
+
+### Landing (Vercel)
+- `app/page.tsx` — homepage Luquisys (institucional)
+- `app/comparabot/page.tsx` — página do produto ComparaBot
+- `app/layout.tsx`, `app/globals.css` — layout + estilos
+- `public/logo.svg` — logo Luquisys
+- `package.json`, `next.config.mjs`, `tailwind.config.ts`, `tsconfig.json`, `postcss.config.mjs` — config Next/Tailwind
+- `.vercelignore` — exclui arquivos Python do deploy Vercel
 
 ## Variáveis de ambiente (Railway)
 ANTHROPIC_API_KEY, TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN,
