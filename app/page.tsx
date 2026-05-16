@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { MontadorCombo } from "./_components/MontadorCombo";
 
 type Produto = {
   slug: string;
@@ -142,36 +143,6 @@ const trilhas: Trilha[] = [
   },
 ];
 
-const bundles = [
-  {
-    nome: "Combo Varejo Completo",
-    inclui: "PDV Pro + PontoPro + ContabilidadePro + ComparaBot",
-    publico: "Pra quem toca uma loja com funcionários",
-    preco: "R$ 397",
-    economia: "Economia ~R$ 50/mês",
-  },
-  {
-    nome: "Combo Fazenda Completa",
-    inclui: "FarmPro + SolarPro + PontoPro + ContabilidadePro",
-    publico: "Produtor rural com energia solar e empregados",
-    preco: "R$ 397",
-    economia: "Economia ~R$ 60/mês",
-  },
-  {
-    nome: "Combo Construtora",
-    inclui: "ObraPro + AluguelPro + FrotaPro + ComparaBot",
-    publico: "Constrói, aluga e tem veículos",
-    preco: "R$ 227",
-    economia: "Economia ~R$ 40/mês",
-  },
-  {
-    nome: "Combo Pessoal",
-    inclui: "BankPro + ViagemPro + MilhasPro + ComparaBot",
-    publico: "Pra organizar a vida pessoal de ponta a ponta",
-    preco: "R$ 119",
-    economia: "Economia ~R$ 28/mês",
-  },
-];
 
 export default function Home() {
   return (
@@ -322,52 +293,20 @@ export default function Home() {
         className="mx-auto max-w-6xl border-t border-neutral-900 px-6 py-20"
       >
         <h2 className="text-center text-3xl font-bold sm:text-4xl">
-          Combos que combinam
+          Monte seu pacote
         </h2>
         <p className="mt-3 text-center text-neutral-400">
-          Sistemas que conversam entre si saem mais barato juntos.
+          Escolha os sistemas que fazem sentido pra você — o desconto vai
+          crescendo conforme você adiciona.
+        </p>
+        <p className="mt-2 text-center text-xs text-gold-dim">
+          ✦ 2 sistemas = 5% off · 3 = 10% off · 4 = 15% off · 5 ou mais = 20%
+          off · ComparaBot vem grátis junto
         </p>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2">
-          {bundles.map((b) => (
-            <div
-              key={b.nome}
-              className="rounded-2xl border border-neutral-900 bg-bg-card p-6 transition hover:border-gold-dim"
-            >
-              <h3 className="text-xl font-bold text-gold">{b.nome}</h3>
-              <p className="mt-2 text-xs uppercase tracking-wider text-neutral-500">
-                {b.publico}
-              </p>
-              <p className="mt-4 text-sm text-neutral-300">
-                <span className="font-semibold text-white">Inclui:</span>{" "}
-                {b.inclui}
-              </p>
-              <div className="mt-6 flex items-end justify-between">
-                <div>
-                  <span className="text-2xl font-black text-white">
-                    {b.preco}
-                  </span>
-                  <span className="text-sm font-medium text-neutral-500">
-                    /mês
-                  </span>
-                </div>
-                <span className="text-xs font-medium text-emerald-400">
-                  {b.economia}
-                </span>
-              </div>
-            </div>
-          ))}
+        <div className="mt-10">
+          <MontadorCombo />
         </div>
-
-        <p className="mt-10 text-center text-sm text-neutral-500">
-          Quer um combo customizado?{" "}
-          <a
-            href="mailto:contato@luquisys.com.br"
-            className="text-gold hover:underline"
-          >
-            Fala com a gente
-          </a>
-        </p>
       </section>
 
       <section className="mx-auto max-w-3xl border-t border-neutral-900 px-6 py-20 text-center">
