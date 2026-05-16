@@ -9,7 +9,19 @@ type Produto = {
   preco: string;
   precoDe?: string;
   badge?: string;
+  appUrl?: string;
+  semTrial?: boolean;
 };
+
+function trialHref(p: Produto) {
+  const base = p.appUrl ?? `https://${p.slug}.luquisys.com.br`;
+  return `${base}/cadastro?trial=1`;
+}
+
+function demoHref(p: Produto) {
+  const base = p.appUrl ?? `https://${p.slug}.luquisys.com.br`;
+  return `${base}/demo`;
+}
 
 type Trilha = {
   id: string;
@@ -116,6 +128,7 @@ const trilhas: Trilha[] = [
         tagline: "Compare orçamentos no WhatsApp em segundos",
         preco: "R$ 9",
         badge: "grátis c/ outro plano",
+        semTrial: true,
       },
     ],
   },
@@ -206,8 +219,8 @@ export default function Home() {
         </div>
 
         <p className="mt-6 text-xs text-neutral-500">
-          ✦ ComparaBot vem <span className="text-gold">grátis</span> com qualquer
-          assinatura
+          ✦ <span className="text-gold">3 dias grátis</span> em qualquer sistema
+          · sem cartão de crédito · ComparaBot vem de bônus
         </p>
       </section>
 
@@ -239,48 +252,79 @@ export default function Home() {
 
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {trilha.produtos.map((p) => (
-                  <Link
+                  <div
                     key={p.slug}
-                    href={`/${p.slug}`}
                     className="group flex flex-col rounded-2xl border border-neutral-900 bg-bg-card p-6 transition hover:border-gold-dim hover:shadow-gold"
                   >
-                    <div className="flex items-start justify-between gap-2">
-                      <div className="flex items-center gap-3">
-                        <span className="text-2xl">{p.icone}</span>
-                        <h4 className="text-lg font-bold text-gold">
-                          {p.nome}
-                        </h4>
-                      </div>
-                      {p.badge && (
-                        <span className="rounded-full border border-gold-dim/60 bg-gold-dark/20 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-gold">
-                          {p.badge}
-                        </span>
-                      )}
-                    </div>
-                    <p className="mt-4 flex-1 text-sm leading-relaxed text-neutral-300">
-                      {p.tagline}
-                    </p>
-                    <div className="mt-6 flex items-end justify-between">
-                      <div>
-                        {p.precoDe && (
-                          <span className="block text-xs text-neutral-500 line-through">
-                            {p.precoDe}/mês
-                          </span>
-                        )}
-                        <span className="text-xl font-black text-white">
-                          {p.preco}
-                        </span>
-                        {!p.preco.includes("/") && (
-                          <span className="text-sm font-medium text-neutral-500">
-                            /mês
+                    <Link href={`/${p.slug}`} className="flex flex-1 flex-col">
+                      <div className="flex items-start justify-between gap-2">
+                        <div className="flex items-center gap-3">
+                          <span className="text-2xl">{p.icone}</span>
+                          <h4 className="text-lg font-bold text-gold">
+                            {p.nome}
+                          </h4>
+                        </div>
+                        {p.badge && (
+                          <span className="rounded-full border border-gold-dim/60 bg-gold-dark/20 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-gold">
+                            {p.badge}
                           </span>
                         )}
                       </div>
-                      <span className="text-sm font-semibold text-gold transition group-hover:translate-x-1">
-                        Conhecer →
-                      </span>
-                    </div>
-                  </Link>
+                      <p className="mt-4 flex-1 text-sm leading-relaxed text-neutral-300">
+                        {p.tagline}
+                      </p>
+                      <div className="mt-6 flex items-end justify-between">
+                        <div>
+                          {p.precoDe && (
+                            <span className="block text-xs text-neutral-500 line-through">
+                              {p.precoDe}/mês
+                            </span>
+                          )}
+                          <span className="text-xl font-black text-white">
+                            {p.preco}
+                          </span>
+                          {!p.preco.includes("/") && (
+                            <span className="text-sm font-medium text-neutral-500">
+                              /mês
+                            </span>
+                          )}
+                        </div>
+                        <span className="text-xs font-semibold text-neutral-500 transition group-hover:text-gold">
+                          detalhes →
+                        </span>
+                      </div>
+                    </Link>
+                    {!p.semTrial && (
+                      <div className="mt-5 grid grid-cols-2 gap-2 border-t border-neutral-900 pt-4">
+                        <a
+                          href={demoHref(p)}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="rounded-full border border-gold-dim/60 px-3 py-2 text-center text-xs font-semibold text-gold transition hover:border-gold"
+                        >
+                          Ver demo
+                        </a>
+                        <a
+                          href={trialHref(p)}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="rounded-full bg-gold px-3 py-2 text-center text-xs font-semibold text-bg transition hover:bg-gold-bright"
+                        >
+                          Testar 3 dias
+                        </a>
+                      </div>
+                    )}
+                    {p.semTrial && (
+                      <div className="mt-5 border-t border-neutral-900 pt-4">
+                        <Link
+                          href={`/${p.slug}`}
+                          className="block rounded-full border border-gold-dim/60 px-3 py-2 text-center text-xs font-semibold text-gold transition hover:border-gold"
+                        >
+                          Como funciona →
+                        </Link>
+                      </div>
+                    )}
+                  </div>
                 ))}
               </div>
             </div>

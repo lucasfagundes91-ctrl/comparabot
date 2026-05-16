@@ -31,6 +31,8 @@ export type ProductPageProps = {
   ctaFinalTitulo?: string;
   ctaFinalTexto?: string;
   appUrl?: string;
+  demoUrl?: string;
+  trialUrl?: string;
 };
 
 export function ProductLayout({
@@ -50,7 +52,11 @@ export function ProductLayout({
   ctaFinalTitulo,
   ctaFinalTexto,
   appUrl,
+  demoUrl,
+  trialUrl,
 }: ProductPageProps) {
+  const demoHref = demoUrl ?? (appUrl ? `${appUrl}/demo` : undefined);
+  const trialHref = trialUrl ?? (appUrl ? `${appUrl}/cadastro?trial=1` : undefined);
   return (
     <main className="radial-bg">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
@@ -60,14 +66,34 @@ export function ProductLayout({
             LUQUISYS
           </span>
         </Link>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3">
           <Link
             href="/"
-            className="text-sm text-neutral-400 transition hover:text-gold"
+            className="hidden text-sm text-neutral-400 transition hover:text-gold sm:inline"
           >
             ← Voltar
           </Link>
-          {appUrl && (
+          {demoHref && (
+            <a
+              href={demoHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-gold-dim px-4 py-2 text-xs font-semibold text-gold transition hover:border-gold sm:text-sm"
+            >
+              Ver demo
+            </a>
+          )}
+          {trialHref && (
+            <a
+              href={trialHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-gold px-4 py-2 text-xs font-semibold text-bg transition hover:bg-gold-bright sm:text-sm"
+            >
+              Testar 3 dias
+            </a>
+          )}
+          {!trialHref && appUrl && (
             <a
               href={appUrl}
               target="_blank"
@@ -95,37 +121,59 @@ export function ProductLayout({
           {descricao}
         </p>
 
-        {(ctaPrimaria || ctaSecundaria) && (
-          <div className="mt-10 flex flex-wrap justify-center gap-3">
-            {ctaPrimaria && (
-              <a
-                href={ctaPrimaria.href}
-                target={
-                  ctaPrimaria.href.startsWith("http") ? "_blank" : undefined
-                }
-                rel={
-                  ctaPrimaria.href.startsWith("http")
-                    ? "noopener noreferrer"
-                    : undefined
-                }
-                className="rounded-full bg-gold px-7 py-3 text-sm font-semibold text-bg transition hover:bg-gold-bright"
-              >
-                {ctaPrimaria.label}
-              </a>
-            )}
-            {ctaSecundaria && (
-              <a
-                href={ctaSecundaria.href}
-                className="rounded-full border border-gold-dim px-7 py-3 text-sm font-semibold text-gold transition hover:border-gold"
-              >
-                {ctaSecundaria.label}
-              </a>
-            )}
-          </div>
-        )}
+        <div className="mt-10 flex flex-wrap justify-center gap-3">
+          {trialHref && (
+            <a
+              href={trialHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-gold px-7 py-3 text-sm font-semibold text-bg transition hover:bg-gold-bright"
+            >
+              Testar 3 dias grátis →
+            </a>
+          )}
+          {demoHref && (
+            <a
+              href={demoHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-gold-dim px-7 py-3 text-sm font-semibold text-gold transition hover:border-gold"
+            >
+              Ver demo (sem cadastro)
+            </a>
+          )}
+          {!trialHref && ctaPrimaria && (
+            <a
+              href={ctaPrimaria.href}
+              target={
+                ctaPrimaria.href.startsWith("http") ? "_blank" : undefined
+              }
+              rel={
+                ctaPrimaria.href.startsWith("http")
+                  ? "noopener noreferrer"
+                  : undefined
+              }
+              className="rounded-full bg-gold px-7 py-3 text-sm font-semibold text-bg transition hover:bg-gold-bright"
+            >
+              {ctaPrimaria.label}
+            </a>
+          )}
+          {!demoHref && ctaSecundaria && (
+            <a
+              href={ctaSecundaria.href}
+              className="rounded-full border border-gold-dim px-7 py-3 text-sm font-semibold text-gold transition hover:border-gold"
+            >
+              {ctaSecundaria.label}
+            </a>
+          )}
+        </div>
 
-        {rodapeHero && (
-          <p className="mt-4 text-xs text-neutral-500">{rodapeHero}</p>
+        {(trialHref || rodapeHero) && (
+          <p className="mt-4 text-xs text-neutral-500">
+            {trialHref
+              ? "✦ Sem cartão de crédito · cancele quando quiser"
+              : rodapeHero}
+          </p>
         )}
       </section>
 
@@ -273,7 +321,7 @@ export function ProductLayout({
         )}
       </section>
 
-      {(ctaFinalTitulo || ctaPrimaria) && (
+      {(ctaFinalTitulo || ctaPrimaria || trialHref) && (
         <section className="mx-auto max-w-3xl px-6 py-20 text-center">
           <h2 className="text-3xl font-bold sm:text-4xl">
             {ctaFinalTitulo || `Pronto pra começar com o ${nome}?`}
@@ -281,22 +329,44 @@ export function ProductLayout({
           {ctaFinalTexto && (
             <p className="mt-4 text-neutral-400">{ctaFinalTexto}</p>
           )}
-          {ctaPrimaria && (
-            <a
-              href={ctaPrimaria.href}
-              target={
-                ctaPrimaria.href.startsWith("http") ? "_blank" : undefined
-              }
-              rel={
-                ctaPrimaria.href.startsWith("http")
-                  ? "noopener noreferrer"
-                  : undefined
-              }
-              className="mt-8 inline-block rounded-full bg-gold px-8 py-4 text-base font-semibold text-bg transition hover:bg-gold-bright"
-            >
-              {ctaPrimaria.label}
-            </a>
-          )}
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            {trialHref && (
+              <a
+                href={trialHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block rounded-full bg-gold px-8 py-4 text-base font-semibold text-bg transition hover:bg-gold-bright"
+              >
+                Testar 3 dias grátis →
+              </a>
+            )}
+            {demoHref && (
+              <a
+                href={demoHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block rounded-full border border-gold-dim px-8 py-4 text-base font-semibold text-gold transition hover:border-gold"
+              >
+                Ver demo
+              </a>
+            )}
+            {!trialHref && ctaPrimaria && (
+              <a
+                href={ctaPrimaria.href}
+                target={
+                  ctaPrimaria.href.startsWith("http") ? "_blank" : undefined
+                }
+                rel={
+                  ctaPrimaria.href.startsWith("http")
+                    ? "noopener noreferrer"
+                    : undefined
+                }
+                className="inline-block rounded-full bg-gold px-8 py-4 text-base font-semibold text-bg transition hover:bg-gold-bright"
+              >
+                {ctaPrimaria.label}
+              </a>
+            )}
+          </div>
         </section>
       )}
 
