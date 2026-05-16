@@ -300,8 +300,8 @@ export default function Home() {
           crescendo conforme você adiciona.
         </p>
         <p className="mt-2 text-center text-xs text-gold-dim">
-          ✦ 2 sistemas = 5% off · 3 = 10% off · 4 = 15% off · 5 ou mais = 20%
-          off · ComparaBot vem grátis junto
+          ✦ +5% off por sistema adicional · pegando os 11 ={" "}
+          <strong className="text-gold">50% off</strong> · ComparaBot vem grátis junto
         </p>
 
         <div className="mt-10">

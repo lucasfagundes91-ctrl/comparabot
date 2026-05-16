@@ -29,6 +29,12 @@ const FAIXAS = [
   { min: 3, pct: 0.10 },
   { min: 4, pct: 0.15 },
   { min: 5, pct: 0.20 },
+  { min: 6, pct: 0.25 },
+  { min: 7, pct: 0.30 },
+  { min: 8, pct: 0.35 },
+  { min: 9, pct: 0.40 },
+  { min: 10, pct: 0.45 },
+  { min: 11, pct: 0.50 },
 ];
 
 function descontoFor(qtd: number) {
@@ -164,7 +170,7 @@ export function MontadorCombo() {
                   Selecione os sistemas que você quer
                 </p>
                 <p className="text-xs text-neutral-500">
-                  Quanto mais sistemas, maior o desconto: 2 = 5% · 3 = 10% · 4 = 15% · 5+ = 20%
+                  +5% off por sistema adicional · pegando os 11 = <strong className="text-gold">50% off</strong>
                 </p>
               </div>
               <span className="rounded-full border border-neutral-800 px-4 py-2 text-xs text-neutral-500">
