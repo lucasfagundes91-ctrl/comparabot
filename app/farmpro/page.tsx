@@ -57,8 +57,24 @@ export default function FarmProPage() {
       ]}
       planos={[
         {
-          nome: "FarmPro",
-          publico: "Gestão completa pro produtor rural",
+          nome: "Básico",
+          publico: "Sítio ou fazenda pequena",
+          precoLabel: "R$ 69",
+          features: [
+            "Caderno de campo",
+            "OCR de notas (até 50/mês)",
+            "Livro caixa",
+            "Até 5 talhões",
+            "1 usuário",
+            "Suporte por e-mail",
+          ],
+          ctaLabel: "Assinar Básico",
+          ctaHref:
+            "mailto:contato@luquisys.com.br?subject=Quero%20o%20FarmPro%20B%C3%A1sico",
+        },
+        {
+          nome: "Pro",
+          publico: "Produtor rural completo",
           precoLabel: "R$ 119",
           features: [
             "Talhões e culturas ilimitados",
@@ -69,10 +85,26 @@ export default function FarmProPage() {
             "Caderno de campo",
             "Suporte por e-mail",
           ],
-          ctaLabel: "Assinar agora",
+          ctaLabel: "Assinar Pro",
           ctaHref:
             "mailto:contato@luquisys.com.br?subject=Quero%20o%20FarmPro",
           destaque: true,
+        },
+        {
+          nome: "Empresa",
+          publico: "Grupo com múltiplas fazendas",
+          precoLabel: "R$ 249",
+          features: [
+            "Tudo do Pro",
+            "Multi-fazenda (até 5)",
+            "Relatórios consolidados",
+            "Comparativo entre safras",
+            "API + integrações",
+            "Suporte prioritário",
+          ],
+          ctaLabel: "Falar com vendas",
+          ctaHref:
+            "mailto:contato@luquisys.com.br?subject=Quero%20o%20FarmPro%20Empresa",
         },
       ]}
       ctaFinalTitulo="A fazenda merece um sistema feito pra ela"

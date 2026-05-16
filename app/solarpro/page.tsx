@@ -57,8 +57,24 @@ export default function SolarProPage() {
       ]}
       planos={[
         {
-          nome: "SolarPro",
-          publico: "Gestão completa pra empresa solar",
+          nome: "Básico",
+          publico: "Integrador começando",
+          precoLabel: "R$ 49",
+          features: [
+            "Até 10 propostas/mês",
+            "OCR de fatura (até 20/mês)",
+            "1 usuário",
+            "Orçamento PDF",
+            "Sem financeiro",
+            "Suporte por e-mail",
+          ],
+          ctaLabel: "Assinar Básico",
+          ctaHref:
+            "mailto:contato@luquisys.com.br?subject=Quero%20o%20SolarPro%20B%C3%A1sico",
+        },
+        {
+          nome: "Pro",
+          publico: "Empresa solar completa",
           precoLabel: "R$ 89",
           precoDe: "R$ 119",
           features: [
@@ -69,10 +85,26 @@ export default function SolarProPage() {
             "Financeiro completo",
             "Suporte por e-mail",
           ],
-          ctaLabel: "Assinar agora",
+          ctaLabel: "Assinar Pro",
           ctaHref:
             "mailto:contato@luquisys.com.br?subject=Quero%20o%20SolarPro",
           destaque: true,
+        },
+        {
+          nome: "Empresa",
+          publico: "Rede de integradores/franquia",
+          precoLabel: "R$ 179",
+          features: [
+            "Tudo do Pro",
+            "Multi-filial",
+            "Comissões por vendedor",
+            "Dashboard consolidado",
+            "API pra distribuidor",
+            "Suporte prioritário",
+          ],
+          ctaLabel: "Falar com vendas",
+          ctaHref:
+            "mailto:contato@luquisys.com.br?subject=Quero%20o%20SolarPro%20Empresa",
         },
       ]}
       ctaFinalTitulo="Seu negócio solar organizado"

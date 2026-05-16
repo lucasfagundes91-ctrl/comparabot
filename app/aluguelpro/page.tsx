@@ -57,21 +57,53 @@ export default function AluguelProPage() {
       ]}
       planos={[
         {
-          nome: "AluguelPro",
-          publico: "Administração de imóveis",
+          nome: "Básico",
+          publico: "Proprietário com poucos imóveis",
+          precoLabel: "R$ 59",
+          features: [
+            "Até 10 imóveis",
+            "Contratos com reajuste",
+            "Cobrança manual (PIX/boleto)",
+            "1 usuário",
+            "Demonstrativo simples",
+            "Suporte por e-mail",
+          ],
+          ctaLabel: "Assinar Básico",
+          ctaHref:
+            "mailto:contato@luquisys.com.br?subject=Quero%20o%20AluguelPro%20B%C3%A1sico",
+        },
+        {
+          nome: "Pro",
+          publico: "Pequena administradora",
           precoLabel: "R$ 99",
           features: [
             "Imóveis e contratos ilimitados",
-            "Cobrança recorrente",
+            "Cobrança recorrente automática",
             "Repasse automático",
-            "Reajustes automáticos",
+            "Reajustes IGP-M/IPCA automáticos",
             "Demonstrativos PDF",
             "Suporte por e-mail",
           ],
-          ctaLabel: "Assinar agora",
+          ctaLabel: "Assinar Pro",
           ctaHref:
             "mailto:contato@luquisys.com.br?subject=Quero%20o%20AluguelPro",
           destaque: true,
+        },
+        {
+          nome: "Empresa",
+          publico: "Administradora com várias filiais",
+          precoLabel: "R$ 199",
+          features: [
+            "Tudo do Pro",
+            "Multi-administradora",
+            "Portal do proprietário",
+            "Portal do inquilino",
+            "API + integrações",
+            "Suporte prioritário",
+          ],
+          ctaLabel: "Falar com vendas",
+          ctaHref:
+            "mailto:contato@luquisys.com.br?subject=Quero%20o%20AluguelPro%20Empresa",
         },
       ]}
       ctaFinalTitulo="Sua carteira de imóveis no controle"

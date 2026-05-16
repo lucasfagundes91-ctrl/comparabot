@@ -58,22 +58,53 @@ export default function ContabilidadeProPage() {
       ]}
       planos={[
         {
-          nome: "ContabilidadePro",
-          publico: "Software + acompanhamento contábil humano",
-          precoLabel: "R$ 199",
+          nome: "Software",
+          publico: "Só o sistema, sem contador",
+          precoLabel: "R$ 99",
           features: [
             "Software completo",
-            "Contador dedicado",
+            "PJ + PF",
+            "Lançamentos automáticos",
+            "Integração com sistemas Luquisys",
+            "Lembretes de vencimento",
+            "Suporte por e-mail",
+          ],
+          ctaLabel: "Assinar Software",
+          ctaHref:
+            "mailto:contato@luquisys.com.br?subject=Quero%20o%20ContabilidadePro%20Software",
+        },
+        {
+          nome: "Pro",
+          publico: "Software + contador dedicado",
+          precoLabel: "R$ 199",
+          features: [
+            "Tudo do Software",
+            "Contador dedicado por WhatsApp",
             "Guias mensais (DAS etc)",
             "DCTFWeb + eSocial",
-            "IRPF da família",
-            "Integração com sistemas Luquisys",
+            "IRPF de até 2 sócios + dependentes",
             "Suporte WhatsApp prioritário",
           ],
-          ctaLabel: "Falar com a gente",
+          ctaLabel: "Assinar Pro",
           ctaHref:
             "mailto:contato@luquisys.com.br?subject=Quero%20o%20ContabilidadePro",
           destaque: true,
+        },
+        {
+          nome: "Premium",
+          publico: "Múltiplas empresas e sócios",
+          precoLabel: "R$ 399",
+          features: [
+            "Tudo do Pro",
+            "Até 3 CNPJs",
+            "IRPF ilimitado (sócios + família)",
+            "Assessoria fiscal/tributária",
+            "Planejamento tributário anual",
+            "Suporte 24h em dia útil",
+          ],
+          ctaLabel: "Falar com a gente",
+          ctaHref:
+            "mailto:contato@luquisys.com.br?subject=Quero%20o%20ContabilidadePro%20Premium",
         },
       ]}
       ctaFinalTitulo="Pare de pagar dois lugares"

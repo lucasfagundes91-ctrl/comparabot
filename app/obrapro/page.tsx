@@ -57,8 +57,24 @@ export default function ObraProPage() {
       ]}
       planos={[
         {
-          nome: "ObraPro",
-          publico: "Controle financeiro completo de obras",
+          nome: "Básico",
+          publico: "1-2 obras simultâneas",
+          precoLabel: "R$ 69",
+          features: [
+            "Até 2 obras ativas",
+            "OCR de notas (até 100/mês)",
+            "1 usuário",
+            "Etapas e investidores",
+            "Relatórios básicos",
+            "Suporte por e-mail",
+          ],
+          ctaLabel: "Assinar Básico",
+          ctaHref:
+            "mailto:contato@luquisys.com.br?subject=Quero%20o%20ObraPro%20B%C3%A1sico",
+        },
+        {
+          nome: "Pro",
+          publico: "Construtora ativa",
           precoLabel: "R$ 119",
           precoDe: "R$ 149",
           features: [
@@ -69,10 +85,26 @@ export default function ObraProPage() {
             "Relatórios e exportação",
             "Suporte por e-mail",
           ],
-          ctaLabel: "Assinar agora",
+          ctaLabel: "Assinar Pro",
           ctaHref:
             "mailto:contato@luquisys.com.br?subject=Quero%20o%20ObraPro",
           destaque: true,
+        },
+        {
+          nome: "Empresa",
+          publico: "Construtora com várias frentes",
+          precoLabel: "R$ 249",
+          features: [
+            "Tudo do Pro",
+            "Multi-empresa (CNPJs)",
+            "API pra integrações",
+            "Relatório por investidor (PDF custom)",
+            "Onboarding dedicado",
+            "Suporte prioritário",
+          ],
+          ctaLabel: "Falar com vendas",
+          ctaHref:
+            "mailto:contato@luquisys.com.br?subject=Quero%20o%20ObraPro%20Empresa",
         },
       ]}
       ctaFinalTitulo="Pare de furar o orçamento"

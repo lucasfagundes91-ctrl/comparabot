@@ -59,20 +59,51 @@ export default function MilhasProPage() {
       ]}
       planos={[
         {
-          nome: "MilhasPro",
-          publico: "Buscas ilimitadas + alertas",
+          nome: "Básico",
+          publico: "Curioso de milhas",
+          precoLabel: "R$ 19",
+          features: [
+            "Até 10 buscas/mês",
+            "Carteira de milhas",
+            "Alerta de vencimento",
+            "Sem rotas monitoradas",
+            "Suporte por e-mail",
+          ],
+          ctaLabel: "Assinar Básico",
+          ctaHref:
+            "mailto:contato@luquisys.com.br?subject=Quero%20o%20MilhasPro%20B%C3%A1sico",
+        },
+        {
+          nome: "Pro",
+          publico: "Pra quem voa direto",
           precoLabel: "R$ 49",
           features: [
             "Buscas ilimitadas Smiles + TudoAzul",
-            "Carteira de milhas com alerta de vencimento",
-            "Rotas monitoradas",
-            "Assistente IA",
+            "Carteira com alerta de vencimento",
+            "Rotas monitoradas com teto de milhas",
+            "Assistente IA: 'vale a pena?'",
             "Suporte por e-mail",
           ],
-          ctaLabel: "Assinar agora",
+          ctaLabel: "Assinar Pro",
           ctaHref:
             "mailto:contato@luquisys.com.br?subject=Quero%20o%20MilhasPro",
           destaque: true,
+        },
+        {
+          nome: "Família",
+          publico: "Família + várias contas de milhas",
+          precoLabel: "R$ 89",
+          features: [
+            "Tudo do Pro",
+            "Até 5 perfis compartilhando",
+            "Soma de milhas da família",
+            "Recomendações cruzadas",
+            "Concierge por e-mail",
+            "Suporte prioritário",
+          ],
+          ctaLabel: "Assinar Família",
+          ctaHref:
+            "mailto:contato@luquisys.com.br?subject=Quero%20o%20MilhasPro%20Fam%C3%ADlia",
         },
       ]}
       ctaFinalTitulo="Voe mais barato sem virar especialista"

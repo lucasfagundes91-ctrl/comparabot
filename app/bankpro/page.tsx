@@ -59,22 +59,54 @@ export default function BankProPage() {
       ]}
       planos={[
         {
-          nome: "BankPro",
-          publico: "App completo + WhatsApp ilimitado",
+          nome: "Básico",
+          publico: "Só você, app web",
+          precoLabel: "R$ 19",
+          features: [
+            "App web completo",
+            "1 pessoa",
+            "Contas e cartões ilimitados",
+            "Importação OFX (5/mês)",
+            "Sem WhatsApp",
+            "Suporte por e-mail",
+          ],
+          ctaLabel: "Assinar Básico",
+          ctaHref:
+            "mailto:contato@luquisys.com.br?subject=Quero%20o%20BankPro%20B%C3%A1sico",
+        },
+        {
+          nome: "Pro",
+          publico: "Você + família + WhatsApp",
           precoLabel: "R$ 49",
           precoDe: "R$ 88",
           features: [
-            "App web completo (sidebar, dashboards, relatórios)",
+            "App web completo",
             "WhatsApp com IA: lançar, consultar, áudio, foto",
             "Multi-pessoa (você + família)",
             "Contas, cartões, investimentos ilimitados",
             "Importação OFX ilimitada",
             "Suporte prioritário",
           ],
-          ctaLabel: "Assinar agora",
+          ctaLabel: "Assinar Pro",
           ctaHref:
             "mailto:contato@luquisys.com.br?subject=Quero%20o%20BankPro",
           destaque: true,
+        },
+        {
+          nome: "Família+",
+          publico: "Patrimônio + planejamento financeiro",
+          precoLabel: "R$ 99",
+          features: [
+            "Tudo do Pro",
+            "Consultoria mensal (30min via call)",
+            "Relatório de patrimônio anual",
+            "Planejamento financeiro guiado",
+            "Suporte prioritário 24h em dia útil",
+            "API bancária (Open Finance)",
+          ],
+          ctaLabel: "Falar com a gente",
+          ctaHref:
+            "mailto:contato@luquisys.com.br?subject=Quero%20o%20BankPro%20Fam%C3%ADlia",
         },
       ]}
       ctaFinalTitulo="Sua vida financeira no controle"

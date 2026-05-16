@@ -58,25 +58,57 @@ export default function PontoProPage() {
       ]}
       planos={[
         {
-          nome: "PontoPro",
-          publico: "Conformidade total Portaria 671",
-          precoLabel: "R$ 49 até 20 func",
+          nome: "Básico",
+          publico: "Equipe pequena (até 5 func)",
+          precoLabel: "R$ 29",
           features: [
-            "Plataforma multi-tenant",
-            "Até 20 funcionários inclusos no plano base",
-            "Funcionários extras: R$ 5/mês cada",
-            "AFD, AEJ, ATTR (PAdES)",
-            "Selfie + GPS",
-            "Banco de horas + ajustes",
+            "Até 5 funcionários",
+            "Ponto via QR/token",
+            "Selfie + GPS opcional",
+            "Comprovante PDF",
+            "Espelho de ponto mensal",
             "Suporte por e-mail",
           ],
-          ctaLabel: "Falar com vendas",
+          ctaLabel: "Assinar Básico",
+          ctaHref:
+            "mailto:contato@luquisys.com.br?subject=Quero%20o%20PontoPro%20B%C3%A1sico",
+        },
+        {
+          nome: "Pro",
+          publico: "PME completa (até 20 func)",
+          precoLabel: "R$ 49",
+          features: [
+            "Até 20 funcionários inclusos",
+            "Funcionários extras: R$ 5/mês cada",
+            "AFD + AEJ (Anexo II e VI)",
+            "ATTR com PAdES ICP-Brasil",
+            "Banco de horas + ajustes",
+            "Justificativas e abonos",
+            "Suporte por e-mail",
+          ],
+          ctaLabel: "Assinar Pro",
           ctaHref:
             "mailto:contato@luquisys.com.br?subject=Quero%20o%20PontoPro",
           destaque: true,
         },
+        {
+          nome: "Empresa",
+          publico: "Empresa grande (50+ func)",
+          precoLabel: "R$ 149",
+          features: [
+            "Tudo do Pro",
+            "Até 50 funcionários inclusos",
+            "Extras: R$ 4/mês cada",
+            "Multi-empresa (matriz + filiais)",
+            "API pra folha (eSocial)",
+            "Suporte prioritário",
+          ],
+          ctaLabel: "Falar com vendas",
+          ctaHref:
+            "mailto:contato@luquisys.com.br?subject=Quero%20o%20PontoPro%20Empresa",
+        },
       ]}
-      rodapeHero="R$ 49 base (até 20 func) + R$ 5 por funcionário extra. Sem fidelidade."
+      rodapeHero="3 planos. Pro a partir de R$ 49 (até 20 func). Sem fidelidade."
       ctaFinalTitulo="Ponto eletrônico sem dor de cabeça"
       ctaFinalTexto="Fiscalização do trabalho não vai te pegar de surpresa."
     appUrl="https://pontopro.luquisys.com.br"

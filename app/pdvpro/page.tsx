@@ -60,8 +60,24 @@ export default function PDVProPage() {
       ]}
       planos={[
         {
-          nome: "PDV Pro",
-          publico: "PDV + ERP + WhatsApp com IA",
+          nome: "Básico",
+          publico: "Loja pequena começando",
+          precoLabel: "R$ 99",
+          features: [
+            "PDV + Caixa + Estoque",
+            "1 usuário",
+            "Até 500 produtos",
+            "Sem NF-e",
+            "Sem WhatsApp IA",
+            "Suporte por e-mail",
+          ],
+          ctaLabel: "Assinar Básico",
+          ctaHref:
+            "mailto:contato@luquisys.com.br?subject=Quero%20o%20PDV%20Pro%20B%C3%A1sico",
+        },
+        {
+          nome: "Pro",
+          publico: "A loja completa",
           precoLabel: "R$ 199",
           features: [
             "13 módulos completos",
@@ -71,10 +87,26 @@ export default function PDVProPage() {
             "Atendimento WhatsApp com IA (Luluzinha)",
             "Suporte por e-mail e WhatsApp",
           ],
-          ctaLabel: "Assinar agora",
+          ctaLabel: "Assinar Pro",
           ctaHref:
             "mailto:contato@luquisys.com.br?subject=Quero%20o%20PDV%20Pro",
           destaque: true,
+        },
+        {
+          nome: "Empresa",
+          publico: "Rede com várias lojas",
+          precoLabel: "R$ 399",
+          features: [
+            "Tudo do Pro",
+            "Até 5 lojas/filiais",
+            "Dashboard consolidado",
+            "API pra integrações",
+            "Onboarding dedicado",
+            "Suporte prioritário 24/7",
+          ],
+          ctaLabel: "Falar com vendas",
+          ctaHref:
+            "mailto:contato@luquisys.com.br?subject=Quero%20o%20PDV%20Pro%20Empresa",
         },
       ]}
       ctaFinalTitulo="A loja inteira em um sistema só"

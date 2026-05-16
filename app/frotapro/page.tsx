@@ -57,22 +57,54 @@ export default function FrotaProPage() {
       ]}
       planos={[
         {
-          nome: "FrotaPro",
-          publico: "Gestão completa da frota",
+          nome: "Básico",
+          publico: "Frota pequena (até 5 veículos)",
+          precoLabel: "R$ 29",
+          features: [
+            "Até 5 veículos",
+            "1 usuário",
+            "IPVA + seguro + manutenção",
+            "Lembretes automáticos",
+            "Sem OCR de comprovante",
+            "Suporte por e-mail",
+          ],
+          ctaLabel: "Assinar Básico",
+          ctaHref:
+            "mailto:contato@luquisys.com.br?subject=Quero%20o%20FrotaPro%20B%C3%A1sico",
+        },
+        {
+          nome: "Pro",
+          publico: "Frota empresarial",
           precoLabel: "R$ 49",
           features: [
-            "Plataforma + assistente IA",
             "Veículos ilimitados",
             "Usuários ilimitados",
             "OCR de comprovante",
             "Lembretes automáticos",
             "Relatórios e dashboards",
+            "Assistente IA",
             "Suporte prioritário",
           ],
-          ctaLabel: "Assinar agora",
+          ctaLabel: "Assinar Pro",
           ctaHref:
             "mailto:contato@luquisys.com.br?subject=Quero%20o%20FrotaPro",
           destaque: true,
+        },
+        {
+          nome: "Empresa",
+          publico: "Frota grande com várias filiais",
+          precoLabel: "R$ 99",
+          features: [
+            "Tudo do Pro",
+            "Multi-empresa (CNPJs)",
+            "Centros de custo",
+            "API + integrações",
+            "Relatórios consolidados",
+            "Onboarding dedicado",
+          ],
+          ctaLabel: "Falar com vendas",
+          ctaHref:
+            "mailto:contato@luquisys.com.br?subject=Quero%20o%20FrotaPro%20Empresa",
         },
       ]}
       ctaFinalTitulo="Frota no controle, sem planilha"
