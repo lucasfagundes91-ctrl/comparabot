@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  // Sem strip de trailing slash — deixa o Flask atrás do proxy decidir.
+  skipTrailingSlashRedirect: true,
 
   async rewrites() {
     return [
