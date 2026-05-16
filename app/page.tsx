@@ -398,12 +398,20 @@ export default function Home() {
 
             <div className="flex flex-col gap-3">
               <a
-                href="mailto:contato@luquisys.com.br?subject=Quero%20um%20sistema%20personalizado&body=Oi%20Lucas%2C%20preciso%20de%20um%20sistema%20pra%3A%20%5Bdescreva%20o%20que%20voc%C3%AA%20precisa%5D"
+                href="https://wa.me/5545991077788?text=Oi%20Lucas%2C%20quero%20um%20sistema%20personalizado"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="rounded-full bg-gold px-7 py-4 text-center text-sm font-semibold text-bg transition hover:bg-gold-bright"
               >
-                Pedir orçamento
+                Falar no WhatsApp
               </a>
-              <p className="text-center text-xs text-neutral-500">
+              <a
+                href="mailto:contato@luquisys.com.br?subject=Quero%20um%20sistema%20personalizado&body=Oi%20Lucas%2C%20preciso%20de%20um%20sistema%20pra%3A%20%5Bdescreva%20o%20que%20voc%C3%AA%20precisa%5D"
+                className="rounded-full border border-gold-dim px-7 py-4 text-center text-sm font-semibold text-gold transition hover:border-gold"
+              >
+                Enviar e-mail
+              </a>
+              <p className="mt-1 text-center text-xs text-neutral-500">
                 Conta o que você precisa — respondo em até 24h com
                 proposta inicial.
               </p>
