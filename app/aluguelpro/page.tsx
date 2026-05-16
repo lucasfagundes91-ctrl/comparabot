@@ -76,6 +76,7 @@ export default function AluguelProPage() {
       ]}
       ctaFinalTitulo="Sua carteira de imóveis no controle"
       ctaFinalTexto="Combine com ContabilidadePro pro imposto certinho."
+    appUrl="https://aluguelpro.luquisys.com.br"
     />
   );
 }

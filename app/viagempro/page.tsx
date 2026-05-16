@@ -76,6 +76,7 @@ export default function ViagemProPage() {
       ]}
       ctaFinalTitulo="Sua próxima viagem planejada em minutos"
       ctaFinalTexto="Sem ficar 3 horas no Google Maps. A IA monta, você ajusta."
+    appUrl="https://viagempro.luquisys.com.br"
     />
   );
 }

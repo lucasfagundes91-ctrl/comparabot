@@ -79,6 +79,7 @@ export default function PDVProPage() {
       ]}
       ctaFinalTitulo="A loja inteira em um sistema só"
       ctaFinalTexto="Combine com ContabilidadePro e PontoPro pra um varejo 100% no controle."
+    appUrl="https://pdvpro.luquisys.com.br"
     />
   );
 }

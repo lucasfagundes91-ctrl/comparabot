@@ -77,6 +77,7 @@ export default function FrotaProPage() {
       ]}
       ctaFinalTitulo="Frota no controle, sem planilha"
       ctaFinalTexto="Você sabe quanto cada veículo está custando por KM rodado?"
+    appUrl="https://frotapro.luquisys.com.br"
     />
   );
 }

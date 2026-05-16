@@ -77,6 +77,7 @@ export default function SolarProPage() {
       ]}
       ctaFinalTitulo="Seu negócio solar organizado"
       ctaFinalTexto="Combine com PontoPro (instaladores) e ContabilidadePro pro fechamento."
+    appUrl="https://solarpro.luquisys.com.br"
     />
   );
 }

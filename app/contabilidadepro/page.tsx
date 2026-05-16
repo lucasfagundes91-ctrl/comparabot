@@ -78,6 +78,7 @@ export default function ContabilidadeProPage() {
       ]}
       ctaFinalTitulo="Pare de pagar dois lugares"
       ctaFinalTexto="Software + contador no mesmo pacote. Tudo conversando."
+    appUrl="https://contabilidadepro.luquisys.com.br"
     />
   );
 }

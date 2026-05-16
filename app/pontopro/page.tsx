@@ -79,6 +79,7 @@ export default function PontoProPage() {
       rodapeHero="R$ 49 base (até 20 func) + R$ 5 por funcionário extra. Sem fidelidade."
       ctaFinalTitulo="Ponto eletrônico sem dor de cabeça"
       ctaFinalTexto="Fiscalização do trabalho não vai te pegar de surpresa."
+    appUrl="https://pontopro.luquisys.com.br"
     />
   );
 }

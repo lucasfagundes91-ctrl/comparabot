@@ -77,6 +77,7 @@ export default function MilhasProPage() {
       ]}
       ctaFinalTitulo="Voe mais barato sem virar especialista"
       ctaFinalTexto="Suas milhas estão valendo a pena? O MilhasPro responde."
+    appUrl="https://milhaspro.luquisys.com.br"
     />
   );
 }

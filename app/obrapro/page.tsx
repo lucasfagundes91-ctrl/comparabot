@@ -77,6 +77,7 @@ export default function ObraProPage() {
       ]}
       ctaFinalTitulo="Pare de furar o orçamento"
       ctaFinalTexto="Combine com ComparaBot pra cotar material antes de comprar."
+    appUrl="https://obrapro.luquisys.com.br"
     />
   );
 }

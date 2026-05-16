@@ -79,6 +79,7 @@ export default function BankProPage() {
       ]}
       ctaFinalTitulo="Sua vida financeira no controle"
       ctaFinalTexto="Sem planilha, sem app que confunde. Lança pelo WhatsApp e pronto."
+    appUrl="https://bankpro.luquisys.com.br"
     />
   );
 }

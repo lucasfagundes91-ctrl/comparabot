@@ -30,6 +30,7 @@ export type ProductPageProps = {
   bonusLuquisys?: boolean;
   ctaFinalTitulo?: string;
   ctaFinalTexto?: string;
+  appUrl?: string;
 };
 
 export function ProductLayout({
@@ -48,6 +49,7 @@ export function ProductLayout({
   bonusLuquisys = true,
   ctaFinalTitulo,
   ctaFinalTexto,
+  appUrl,
 }: ProductPageProps) {
   return (
     <main className="radial-bg">
@@ -58,12 +60,24 @@ export function ProductLayout({
             LUQUISYS
           </span>
         </Link>
-        <Link
-          href="/"
-          className="text-sm text-neutral-400 transition hover:text-gold"
-        >
-          ← Voltar
-        </Link>
+        <div className="flex items-center gap-4">
+          <Link
+            href="/"
+            className="text-sm text-neutral-400 transition hover:text-gold"
+          >
+            ← Voltar
+          </Link>
+          {appUrl && (
+            <a
+              href={appUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-gold px-5 py-2 text-sm font-semibold text-bg transition hover:bg-gold-bright"
+            >
+              Entrar →
+            </a>
+          )}
+        </div>
       </nav>
 
       <section className="mx-auto max-w-4xl px-6 pb-16 pt-12 text-center sm:pt-20">

@@ -77,6 +77,7 @@ export default function FarmProPage() {
       ]}
       ctaFinalTitulo="A fazenda merece um sistema feito pra ela"
       ctaFinalTexto="Combine com SolarPro (se gera energia solar) e ContabilidadePro pro fechamento."
+    appUrl="https://farmpro.luquisys.com.br"
     />
   );
 }
