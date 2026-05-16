@@ -66,42 +66,53 @@ export function ProductLayout({
             LUQUISYS
           </span>
         </Link>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
           <Link
             href="/"
-            className="hidden text-sm text-neutral-400 transition hover:text-gold sm:inline"
+            className="hidden text-sm text-neutral-400 transition hover:text-gold lg:inline"
           >
             ← Voltar
           </Link>
+          {appUrl && (
+            <a
+              href={appUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden text-sm text-neutral-400 transition hover:text-gold sm:inline"
+            >
+              Entrar
+            </a>
+          )}
           {demoHref && (
             <a
               href={demoHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full border border-gold-dim px-4 py-2 text-xs font-semibold text-gold transition hover:border-gold sm:text-sm"
+              className="rounded-full border border-gold-dim px-3 py-2 text-xs font-semibold text-gold transition hover:border-gold sm:px-4 sm:text-sm"
             >
               Ver demo
             </a>
           )}
-          {trialHref && (
+          {trialHref ? (
             <a
               href={trialHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full bg-gold px-4 py-2 text-xs font-semibold text-bg transition hover:bg-gold-bright sm:text-sm"
+              className="rounded-full bg-gold px-3 py-2 text-xs font-semibold text-bg transition hover:bg-gold-bright sm:px-4 sm:text-sm"
             >
               Testar 3 dias
             </a>
-          )}
-          {!trialHref && appUrl && (
-            <a
-              href={appUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full bg-gold px-5 py-2 text-sm font-semibold text-bg transition hover:bg-gold-bright"
-            >
-              Entrar →
-            </a>
+          ) : (
+            appUrl && (
+              <a
+                href={appUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full bg-gold px-5 py-2 text-sm font-semibold text-bg transition hover:bg-gold-bright sm:hidden"
+              >
+                Entrar →
+              </a>
+            )
           )}
         </div>
       </nav>
