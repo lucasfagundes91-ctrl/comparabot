@@ -1,24 +1,27 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // Sem strip de trailing slash — deixa o Flask atrás do proxy decidir.
   skipTrailingSlashRedirect: true,
 
-  async rewrites() {
+  // /assinatura → redirect pro app interno.
+  // Optamos por redirect (não rewrite) porque o Vercel transforma redirects
+  // internos do Flask em 308 absolutos quando proxando, e o Flask gera URLs
+  // absolutas com o Host interno em casos como Flask-Login. Redirect 301
+  // resolve definitivamente: o browser vai direto pro subdomínio.
+  async redirects() {
     return [
-      // AssinaturasPro (Flask + Postgres no Railway) — proxy mantendo o prefixo
-      // pra que o app receba o path /assinatura/* e gere URLs internas corretas.
       {
         source: '/assinatura',
-        destination: 'https://assinatura.luquisys.com.br/assinatura',
+        destination: 'https://assinatura.luquisys.com.br/assinatura/',
+        permanent: false,
       },
       {
         source: '/assinatura/:path*',
         destination: 'https://assinatura.luquisys.com.br/assinatura/:path*',
+        permanent: false,
       },
     ];
   },
-
 };
 
 export default nextConfig;
