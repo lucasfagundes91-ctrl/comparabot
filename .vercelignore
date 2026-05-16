@@ -1,6 +1,4 @@
-# Arquivos do backend Python (deployados no Railway, ignorados pelo Vercel)
-*.py
-__pycache__/
-requirements.txt
-railway.json
+# Backend Python (deploy no Railway, ignorado pelo Vercel)
+bot/
 .venv/
+__pycache__/

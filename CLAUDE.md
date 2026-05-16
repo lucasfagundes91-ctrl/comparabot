@@ -1,53 +1,51 @@
-# ComparaBot — Contexto para Claude Code
+# Luqsys — Contexto para Claude Code
 
-## O que é este projeto
-Bot de WhatsApp que compara orçamentos. Usuário manda fotos ou textos de 2 a 5 orçamentos,
-Claude Vision extrai os itens e Claude gera análise comparativa. SaaS com plano free
-(3 comparações/mês) e pago (R$19/mês, ilimitado).
+## O que é este repo
+Casa da marca-guarda-chuva **Luqsys — Sistemas de Gestão**. Hospeda dois deploys distintos a partir do mesmo repositório:
 
-## Marca
-ComparaBot é o primeiro produto sob a marca-guarda-chuva *Luqsys — Sistemas de Gestão*.
-Domínio institucional: luqsys.com.br. URL do produto: luqsys.com.br/comparabot.
-Novos produtos seguem o mesmo padrão (luqsys.com.br/<produto>).
+1. **Landing institucional (Vercel)** — Next.js 15 + React 19 + Tailwind, na raiz. Páginas por produto em `app/<produto>/page.tsx`. URLs sempre no formato `www.luqsys.com.br/<produto>` (path-based, nunca subdomínio).
+2. **ComparaBot (Railway)** — bot WhatsApp original da Luqsys, FastAPI + Twilio + Anthropic + Postgres. Vive em `bot/`. SaaS free 3/mês, pago R$19/mês.
 
-## Stack
-- **Backend (bot):** FastAPI + Uvicorn | Twilio WhatsApp | Anthropic (claude-sonnet-4-6) | PostgreSQL — deploy Railway
-- **Landing (web):** Next.js 15 + React 19 + Tailwind — deploy Vercel
-- Mesmo repo, separação por arquivos. Vercel usa `.vercelignore` pra ignorar Python; Railway usa NIXPACKS que ignora Next.js automaticamente.
+Cada nova landing de produto vira uma rota em `app/<produto>/page.tsx`. Backends próprios de cada produto vivem em seus próprios repos.
 
-## Arquivos
-### Backend (Railway)
-- `main.py` — FastAPI, webhook Twilio, endpoint /admin/ativar-pago
-- `comparador_orcamentos.py` — lógica do bot: sessões, OCR, análise
-- `database.py` — PostgreSQL: tabelas usuarios_bot e uso_mensal
-- `railway.json` — start command: `uvicorn main:app --host 0.0.0.0 --port $PORT`
+## Estrutura
+```
+luqsys/
+├── app/                          # Next.js (Vercel)
+│   ├── page.tsx                  # home Luqsys (www.luqsys.com.br)
+│   ├── comparabot/page.tsx       # www.luqsys.com.br/comparabot
+│   ├── bankpro/page.tsx          # www.luqsys.com.br/bankpro
+│   ├── farmpro/, frotapro/, pdvpro/, ...
+│   ├── _components/              # shared
+│   ├── layout.tsx, globals.css
+├── public/                       # assets Next
+├── bot/                          # ComparaBot (Railway)
+│   ├── main.py                   # FastAPI + webhook Twilio
+│   ├── comparador_orcamentos.py  # lógica do bot
+│   ├── database.py               # Postgres
+│   ├── requirements.txt
+│   └── railway.json              # startCommand: uvicorn main:app
+├── package.json, next.config.mjs, tailwind.config.ts, tsconfig.json
+├── .vercelignore                 # ignora bot/
+└── .gitignore
+```
 
-### Landing (Vercel)
-- `app/page.tsx` — homepage Luqsys (institucional)
-- `app/comparabot/page.tsx` — página do produto ComparaBot
-- `app/layout.tsx`, `app/globals.css` — layout + estilos
-- `public/logo.svg` — logo Luqsys
-- `package.json`, `next.config.mjs`, `tailwind.config.ts`, `tsconfig.json`, `postcss.config.mjs` — config Next/Tailwind
-- `.vercelignore` — exclui arquivos Python do deploy Vercel
+## Deploys
+- **Vercel** projeto `luquisys` (team `luqui-sys`). Auto-deploy no push em main. `.vercelignore` exclui `bot/`. Domínio: `www.luqsys.com.br`.
+- **Railway** projeto `comparabot` (id `5020e58b-e0c9-448e-a78d-6c90c8794a38`), serviço `comparabot` com **root directory = `bot/`**. Postgres anexado. Auto-deploy no push em main. Domínio: `https://comparabot-production.up.railway.app`. Webhook Twilio aponta pra `/webhook/whatsapp`.
 
 ## Variáveis de ambiente (Railway)
-ANTHROPIC_API_KEY, TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN,
-TWILIO_WHATSAPP_NUMBER (ex: whatsapp:+15559312876),
-DATABASE_URL (injetado pelo plugin Postgres),
-LINK_PAGAMENTO, ADMIN_SECRET
+ANTHROPIC_API_KEY, TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN, TWILIO_WHATSAPP_NUMBER, DATABASE_URL (Postgres), LINK_PAGAMENTO (default `https://www.luqsys.com.br/comparabot/assinar`), ADMIN_SECRET.
 
 ## Fluxo do bot
-idle → coletando → [analisar] → idle
-Sessões isoladas por telefone, TTL 60min, máximo 5 orçamentos, mínimo 2 para analisar.
+idle → coletando → [analisar] → idle. Sessões por telefone, TTL 60min, máx 5 orçamentos, mín 2.
 
 ## Padrões
-- Sempre validar: python3 -m py_compile main.py comparador_orcamentos.py database.py
-- Commits: vX.Y: descrição breve
-- Mensagens WhatsApp: *negrito*, _itálico_, máx 1500 chars (função _dividir cuida disso)
-- Modelo sempre: claude-sonnet-4-6
+- URLs sempre `www.luqsys.com.br/<produto>` — nunca subdomínio (`produto.luqsys.com.br`) nem só path raiz
+- Validar Python: `python3 -m py_compile bot/main.py bot/comparador_orcamentos.py bot/database.py`
+- Commits: `vX.Y: descrição breve`
+- WhatsApp: *negrito*, _itálico_, máx 1500 chars (`_dividir`)
+- Modelo Anthropic: `claude-sonnet-4-6`
 
-## Próximas features
-- [ ] Landing page Luqsys (luqsys.com.br) + página do produto (luqsys.com.br/comparabot)
-- [ ] Webhook de pagamento automático (Stripe/Hotmart → /admin/ativar-pago)
-- [ ] Histórico de comparações por usuário
-- [ ] Nomear fornecedores no chat
+## Token Railway
+Token de conta em `~/.railway_token`. Usar como `RAILWAY_API_TOKEN` (não `RAILWAY_TOKEN`).
