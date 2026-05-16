@@ -100,9 +100,8 @@ export default function FrotaProPage() {
             "Relatórios consolidados",
             "Onboarding dedicado",
           ],
-          ctaLabel: "Falar com vendas",
-          ctaHref:
-            "mailto:contato@luquisys.com.br?subject=Quero%20o%20FrotaPro%20Empresa",
+          ctaLabel: "Assinar Empresa",
+          ctaHref: "https://www.asaas.com/c/b0h36jbs6uwb6lsz",
         },
       ]}
       ctaFinalTitulo="Frota no controle, sem planilha"

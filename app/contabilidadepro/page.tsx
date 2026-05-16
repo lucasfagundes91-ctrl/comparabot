@@ -100,9 +100,8 @@ export default function ContabilidadeProPage() {
             "Planejamento tributário anual",
             "Suporte 24h em dia útil",
           ],
-          ctaLabel: "Falar com a gente",
-          ctaHref:
-            "mailto:contato@luquisys.com.br?subject=Quero%20o%20ContabilidadePro%20Premium",
+          ctaLabel: "Assinar Premium",
+          ctaHref: "https://www.asaas.com/c/4w4k8ghm6n06vsxy",
         },
       ]}
       ctaFinalTitulo="Pare de pagar dois lugares"

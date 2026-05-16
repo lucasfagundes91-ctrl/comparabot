@@ -100,9 +100,8 @@ export default function FarmProPage() {
             "API + integrações",
             "Suporte prioritário",
           ],
-          ctaLabel: "Falar com vendas",
-          ctaHref:
-            "mailto:contato@luquisys.com.br?subject=Quero%20o%20FarmPro%20Empresa",
+          ctaLabel: "Assinar Empresa",
+          ctaHref: "https://www.asaas.com/c/k2dtdzavrcj9ip8g",
         },
       ]}
       ctaFinalTitulo="A fazenda merece um sistema feito pra ela"

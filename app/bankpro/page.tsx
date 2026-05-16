@@ -102,9 +102,8 @@ export default function BankProPage() {
             "Suporte prioritário 24h em dia útil",
             "API bancária (Open Finance)",
           ],
-          ctaLabel: "Falar com a gente",
-          ctaHref:
-            "mailto:contato@luquisys.com.br?subject=Quero%20o%20BankPro%20Fam%C3%ADlia",
+          ctaLabel: "Assinar Família+",
+          ctaHref: "https://www.asaas.com/c/votuo35ov6pwoggt",
         },
       ]}
       ctaFinalTitulo="Sua vida financeira no controle"

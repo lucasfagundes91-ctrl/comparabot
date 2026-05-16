@@ -99,9 +99,8 @@ export default function AluguelProPage() {
             "API + integrações",
             "Suporte prioritário",
           ],
-          ctaLabel: "Falar com vendas",
-          ctaHref:
-            "mailto:contato@luquisys.com.br?subject=Quero%20o%20AluguelPro%20Empresa",
+          ctaLabel: "Assinar Empresa",
+          ctaHref: "https://www.asaas.com/c/yvfvq42xetpq1i59",
         },
       ]}
       ctaFinalTitulo="Sua carteira de imóveis no controle"

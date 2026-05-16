@@ -100,9 +100,8 @@ export default function ObraProPage() {
             "Onboarding dedicado",
             "Suporte prioritário",
           ],
-          ctaLabel: "Falar com vendas",
-          ctaHref:
-            "mailto:contato@luquisys.com.br?subject=Quero%20o%20ObraPro%20Empresa",
+          ctaLabel: "Assinar Empresa",
+          ctaHref: "https://www.asaas.com/c/qf8m56k3w21dhmha",
         },
       ]}
       ctaFinalTitulo="Pare de furar o orçamento"

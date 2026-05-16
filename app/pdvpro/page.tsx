@@ -102,9 +102,8 @@ export default function PDVProPage() {
             "Onboarding dedicado",
             "Suporte prioritário 24/7",
           ],
-          ctaLabel: "Falar com vendas",
-          ctaHref:
-            "mailto:contato@luquisys.com.br?subject=Quero%20o%20PDV%20Pro%20Empresa",
+          ctaLabel: "Assinar Empresa",
+          ctaHref: "https://www.asaas.com/c/0gfob8hswmye4emq",
         },
       ]}
       ctaFinalTitulo="A loja inteira em um sistema só"

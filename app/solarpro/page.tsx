@@ -100,9 +100,8 @@ export default function SolarProPage() {
             "API pra distribuidor",
             "Suporte prioritário",
           ],
-          ctaLabel: "Falar com vendas",
-          ctaHref:
-            "mailto:contato@luquisys.com.br?subject=Quero%20o%20SolarPro%20Empresa",
+          ctaLabel: "Assinar Empresa",
+          ctaHref: "https://www.asaas.com/c/rsu497dzfvpwbmp6",
         },
       ]}
       ctaFinalTitulo="Seu negócio solar organizado"

@@ -101,9 +101,8 @@ export default function PontoProPage() {
             "API pra folha (eSocial)",
             "Suporte prioritário",
           ],
-          ctaLabel: "Falar com vendas",
-          ctaHref:
-            "mailto:contato@luquisys.com.br?subject=Quero%20o%20PontoPro%20Empresa",
+          ctaLabel: "Assinar Empresa",
+          ctaHref: "https://www.asaas.com/c/gtru0vknwtodd96y",
         },
       ]}
       rodapeHero="3 planos. Pro a partir de R$ 49 (até 20 func). Sem fidelidade."
