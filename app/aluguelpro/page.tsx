@@ -22,7 +22,7 @@ export default function AluguelProPage() {
       }
       ctaPrimaria={{
         label: "Falar com vendas",
-        href: "mailto:contato@luquisys.com.br?subject=Quero%20o%20AluguelPro",
+        href: "mailto:contato@luqsys.com.br?subject=Quero%20o%20AluguelPro",
       }}
       ctaSecundaria={{ label: "Ver planos", href: "#planos" }}
       passos={[
@@ -105,7 +105,7 @@ export default function AluguelProPage() {
       ]}
       ctaFinalTitulo="Sua carteira de imóveis no controle"
       ctaFinalTexto="Combine com ContabilidadePro pro imposto certinho."
-    appUrl="https://aluguelpro.luquisys.com.br"
+    appUrl="https://aluguelpro.luqsys.com.br"
     assinarUrl="https://www.asaas.com/c/mhw1a1fe2i14hit6"
     />
   );

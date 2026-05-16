@@ -14,12 +14,12 @@ type Produto = {
 };
 
 function trialHref(p: Produto) {
-  const base = p.appUrl ?? `https://${p.slug}.luquisys.com.br`;
+  const base = p.appUrl ?? `https://${p.slug}.luqsys.com.br`;
   return `${base}/cadastro?trial=1`;
 }
 
 function demoHref(p: Produto) {
-  const base = p.appUrl ?? `https://${p.slug}.luquisys.com.br`;
+  const base = p.appUrl ?? `https://${p.slug}.luqsys.com.br`;
   return `${base}/demo`;
 }
 
@@ -178,7 +178,7 @@ export default function Home() {
             Sob medida
           </a>
           <a
-            href="mailto:contato@luquisys.com.br"
+            href="mailto:contato@luqsys.com.br"
             className="text-neutral-400 transition hover:text-gold"
           >
             Contato
@@ -406,7 +406,7 @@ export default function Home() {
                 Falar no WhatsApp
               </a>
               <a
-                href="mailto:contato@luquisys.com.br?subject=Quero%20um%20sistema%20personalizado&body=Oi%20Lucas%2C%20preciso%20de%20um%20sistema%20pra%3A%20%5Bdescreva%20o%20que%20voc%C3%AA%20precisa%5D"
+                href="mailto:contato@luqsys.com.br?subject=Quero%20um%20sistema%20personalizado&body=Oi%20Lucas%2C%20preciso%20de%20um%20sistema%20pra%3A%20%5Bdescreva%20o%20que%20voc%C3%AA%20precisa%5D"
                 className="rounded-full border border-gold-dim px-7 py-4 text-center text-sm font-semibold text-gold transition hover:border-gold"
               >
                 Enviar e-mail
@@ -436,7 +436,7 @@ export default function Home() {
             Explorar sistemas
           </Link>
           <a
-            href="mailto:contato@luquisys.com.br"
+            href="mailto:contato@luqsys.com.br"
             className="rounded-full border border-gold-dim px-7 py-3 text-sm font-semibold text-gold transition hover:border-gold"
           >
             Falar com a gente
@@ -446,7 +446,7 @@ export default function Home() {
 
       <footer className="border-t border-neutral-900 px-6 py-10 text-center text-sm text-neutral-500">
         <p>© {new Date().getFullYear()} Luqsys. Todos os direitos reservados.</p>
-        <p className="mt-1">luquisys.com.br</p>
+        <p className="mt-1">luqsys.com.br</p>
       </footer>
     </main>
   );

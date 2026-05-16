@@ -22,7 +22,7 @@ export default function FarmProPage() {
       }
       ctaPrimaria={{
         label: "Falar com vendas",
-        href: "mailto:contato@luquisys.com.br?subject=Quero%20o%20FarmPro",
+        href: "mailto:contato@luqsys.com.br?subject=Quero%20o%20FarmPro",
       }}
       ctaSecundaria={{ label: "Ver planos", href: "#planos" }}
       passos={[
@@ -106,7 +106,7 @@ export default function FarmProPage() {
       ]}
       ctaFinalTitulo="A fazenda merece um sistema feito pra ela"
       ctaFinalTexto="Combine com SolarPro (se gera energia solar) e ContabilidadePro pro fechamento."
-    appUrl="https://farmpro.luquisys.com.br"
+    appUrl="https://farmpro.luqsys.com.br"
     assinarUrl="https://www.asaas.com/c/8uvtsmwsprfokrd1"
     />
   );

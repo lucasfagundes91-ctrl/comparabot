@@ -24,7 +24,7 @@ export default function MilhasProPage() {
       }
       ctaPrimaria={{
         label: "Falar com a gente",
-        href: "mailto:contato@luquisys.com.br?subject=Quero%20o%20MilhasPro",
+        href: "mailto:contato@luqsys.com.br?subject=Quero%20o%20MilhasPro",
       }}
       ctaSecundaria={{ label: "Ver planos", href: "#planos" }}
       passos={[
@@ -105,7 +105,7 @@ export default function MilhasProPage() {
       ]}
       ctaFinalTitulo="Voe mais barato sem virar especialista"
       ctaFinalTexto="Suas milhas estão valendo a pena? O MilhasPro responde."
-    appUrl="https://milhaspro.luquisys.com.br"
+    appUrl="https://milhaspro.luqsys.com.br"
     assinarUrl="https://www.asaas.com/c/q4ceriz467m31i85"
     />
   );

@@ -27,7 +27,7 @@ export type ProductPageProps = {
   features: string[];
   featuresTitulo?: string;
   planos: Plano[];
-  bonusLuquisys?: boolean;
+  bonusLuqsys?: boolean;
   ctaFinalTitulo?: string;
   ctaFinalTexto?: string;
   appUrl?: string;
@@ -49,7 +49,7 @@ export function ProductLayout({
   features,
   featuresTitulo = "O que ele faz",
   planos,
-  bonusLuquisys = true,
+  bonusLuqsys = true,
   ctaFinalTitulo,
   ctaFinalTexto,
   appUrl,
@@ -320,7 +320,7 @@ export function ProductLayout({
           ))}
         </div>
 
-        {bonusLuquisys && (
+        {bonusLuqsys && (
           <div className="mt-8 rounded-2xl border border-gold-dim bg-gradient-to-br from-gold-dark/40 to-bg-card p-6">
             <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
               <div>

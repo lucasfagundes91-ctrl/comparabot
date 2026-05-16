@@ -23,7 +23,7 @@ export default function PDVProPage() {
       }
       ctaPrimaria={{
         label: "Falar com vendas",
-        href: "mailto:contato@luquisys.com.br?subject=Quero%20o%20PDV%20Pro",
+        href: "mailto:contato@luqsys.com.br?subject=Quero%20o%20PDV%20Pro",
       }}
       ctaSecundaria={{ label: "Ver planos", href: "#planos" }}
       passos={[
@@ -108,7 +108,7 @@ export default function PDVProPage() {
       ]}
       ctaFinalTitulo="A loja inteira em um sistema só"
       ctaFinalTexto="Combine com ContabilidadePro e PontoPro pra um varejo 100% no controle."
-    appUrl="https://pdvpro.luquisys.com.br"
+    appUrl="https://pdvpro.luqsys.com.br"
     assinarUrl="https://www.asaas.com/c/l3c8v5dx1nh84z0k"
     />
   );

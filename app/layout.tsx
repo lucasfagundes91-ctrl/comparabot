@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://luquisys.com.br"),
+  metadataBase: new URL("https://luqsys.com.br"),
   title: {
     default: "Luqsys — Sistemas de Gestão Empresarial",
     template: "%s · Luqsys",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title: "Luqsys — Sistemas de Gestão Empresarial",
     description:
       "Soluções práticas de gestão para pequenas e médias empresas.",
-    url: "https://luquisys.com.br",
+    url: "https://luqsys.com.br",
     siteName: "Luqsys",
     locale: "pt_BR",
     type: "website",

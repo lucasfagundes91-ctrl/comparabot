@@ -22,7 +22,7 @@ export default function ContabilidadeProPage() {
       }
       ctaPrimaria={{
         label: "Falar com a gente",
-        href: "mailto:contato@luquisys.com.br?subject=Quero%20o%20ContabilidadePro",
+        href: "mailto:contato@luqsys.com.br?subject=Quero%20o%20ContabilidadePro",
       }}
       ctaSecundaria={{ label: "Ver planos", href: "#planos" }}
       passos={[
@@ -106,7 +106,7 @@ export default function ContabilidadeProPage() {
       ]}
       ctaFinalTitulo="Pare de pagar dois lugares"
       ctaFinalTexto="Software + contador no mesmo pacote. Tudo conversando."
-    appUrl="https://contabilidadepro.luquisys.com.br"
+    appUrl="https://contabilidadepro.luqsys.com.br"
     assinarUrl="https://www.asaas.com/c/alf8qiy9p8nazwx8"
     />
   );

@@ -24,7 +24,7 @@ export default function BankProPage() {
       }
       ctaPrimaria={{
         label: "Falar com a gente",
-        href: "mailto:contato@luquisys.com.br?subject=Quero%20o%20BankPro",
+        href: "mailto:contato@luqsys.com.br?subject=Quero%20o%20BankPro",
       }}
       ctaSecundaria={{ label: "Ver planos", href: "#planos" }}
       passos={[
@@ -108,7 +108,7 @@ export default function BankProPage() {
       ]}
       ctaFinalTitulo="Sua vida financeira no controle"
       ctaFinalTexto="Sem planilha, sem app que confunde. Lança pelo WhatsApp e pronto."
-    appUrl="https://bankpro.luquisys.com.br"
+    appUrl="https://bankpro.luqsys.com.br"
     assinarUrl="https://www.asaas.com/c/ou3zyy6fr8hiyt5x"
     />
   );

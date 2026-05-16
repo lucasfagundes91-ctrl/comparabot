@@ -22,7 +22,7 @@ export default function PontoProPage() {
       }
       ctaPrimaria={{
         label: "Falar com vendas",
-        href: "mailto:contato@luquisys.com.br?subject=Quero%20o%20PontoPro",
+        href: "mailto:contato@luqsys.com.br?subject=Quero%20o%20PontoPro",
       }}
       ctaSecundaria={{ label: "Ver planos", href: "#planos" }}
       passos={[
@@ -108,7 +108,7 @@ export default function PontoProPage() {
       rodapeHero="3 planos. Pro a partir de R$ 49 (até 20 func). Sem fidelidade."
       ctaFinalTitulo="Ponto eletrônico sem dor de cabeça"
       ctaFinalTexto="Fiscalização do trabalho não vai te pegar de surpresa."
-    appUrl="https://pontopro.luquisys.com.br"
+    appUrl="https://pontopro.luqsys.com.br"
     assinarUrl="https://www.asaas.com/c/a77msa0ndv1smwxn"
     />
   );

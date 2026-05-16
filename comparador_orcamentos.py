@@ -25,7 +25,7 @@ RE_NOVO     = re.compile(r"\b(novo|recomeç|de novo|outra vez|reinicia)\b", re.I
 RE_AJUDA    = re.compile(r"\b(ajuda|help|como (usa|funciona)|oi|ol[aá]|bom dia|boa tarde|boa noite)\b", re.I)
 RE_ASSINAR  = re.compile(r"\b(assinar|plano|pagar|upgrade|liberar|quero (mais|pago))\b", re.I)
 
-LINK_PAGAMENTO = os.environ.get("LINK_PAGAMENTO", "https://luquisys.com.br/comparabot/assinar")
+LINK_PAGAMENTO = os.environ.get("LINK_PAGAMENTO", "https://luqsys.com.br/comparabot/assinar")
 
 
 def _session(phone):
@@ -188,17 +188,17 @@ def _analisar(orcamentos):
 
 
 MSG_BOAS_VINDAS = (
-    "👋 Olá! Sou o *ComparaBot* da *Luquisys* — comparo orçamentos pra você na hora.\n\n"
+    "👋 Olá! Sou o *ComparaBot* da *Luqsys* — comparo orçamentos pra você na hora.\n\n"
     "📋 Me manda a *foto* ou o *texto* do primeiro orçamento.\n\n"
     "_Plano gratuito: {restantes} comparação(ões) disponível(eis) este mês._\n"
-    "_Saiba mais: luquisys.com.br/comparabot_"
+    "_Saiba mais: luqsys.com.br/comparabot_"
 )
 MSG_LIMITE = (
     "⚠️ Você atingiu o limite de *{limite} comparações gratuitas* este mês.\n\n"
     "Para continuar, assine por *R$ 9/mês*:\n"
     f"👉 {LINK_PAGAMENTO}\n\n"
-    "💡 *Dica:* o ComparaBot Pro vem *grátis* pra quem assina qualquer outro sistema da Luquisys (BankPro, LuquiPDV, FarmPro, etc).\n"
-    "_Conheça: luquisys.com.br_\n\n"
+    "💡 *Dica:* o ComparaBot Pro vem *grátis* pra quem assina qualquer outro sistema da Luqsys (BankPro, LuquiPDV, FarmPro, etc).\n"
+    "_Conheça: luqsys.com.br_\n\n"
     "_Suas comparações voltam em 1º do próximo mês._"
 )
 MSG_CANCELADO   = "Tudo bem! Sessão encerrada. Me chama quando precisar. 👋"
@@ -208,7 +208,7 @@ MSG_ERRO_IMAGEM = "Não consegui ler a imagem. 😕 Tenta uma foto mais nítida,
 MSG_ERRO_TEXTO  = "Não consegui identificar itens. 🤔\nEx: _Cimento 5 sacos R$35 cada_"
 MSG_ASSINAR     = (
     f"Para assinar o plano ilimitado por *R$ 9/mês*:\n👉 {LINK_PAGAMENTO}\n\n"
-    "💡 Ou ganhe *grátis* assinando qualquer outro sistema Luquisys (BankPro, LuquiPDV, FarmPro, etc): luquisys.com.br"
+    "💡 Ou ganhe *grátis* assinando qualquer outro sistema Luqsys (BankPro, LuquiPDV, FarmPro, etc): luqsys.com.br"
 )
 
 def _msg_proximo(n):

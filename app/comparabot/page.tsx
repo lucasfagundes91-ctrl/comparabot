@@ -207,7 +207,7 @@ export default function ComparaBot() {
               <li>✓ Suporte prioritário</li>
             </ul>
             <a
-              href="mailto:contato@luquisys.com.br?subject=Quero%20o%20ComparaBot%20Equipe"
+              href="mailto:contato@luqsys.com.br?subject=Quero%20o%20ComparaBot%20Equipe"
               className="mt-8 block rounded-full border border-gold-dim px-6 py-3 text-center text-sm font-semibold text-gold transition hover:border-gold"
             >
               Falar com a gente

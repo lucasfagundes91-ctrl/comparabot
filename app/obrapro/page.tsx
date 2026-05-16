@@ -22,7 +22,7 @@ export default function ObraProPage() {
       }
       ctaPrimaria={{
         label: "Falar com vendas",
-        href: "mailto:contato@luquisys.com.br?subject=Quero%20o%20ObraPro",
+        href: "mailto:contato@luqsys.com.br?subject=Quero%20o%20ObraPro",
       }}
       ctaSecundaria={{ label: "Ver planos", href: "#planos" }}
       passos={[
@@ -106,7 +106,7 @@ export default function ObraProPage() {
       ]}
       ctaFinalTitulo="Pare de furar o orçamento"
       ctaFinalTexto="Combine com ComparaBot pra cotar material antes de comprar."
-    appUrl="https://obrapro.luquisys.com.br"
+    appUrl="https://obrapro.luqsys.com.br"
     assinarUrl="https://www.asaas.com/c/gj85zr3wdfwp28vp"
     />
   );

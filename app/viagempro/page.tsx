@@ -22,7 +22,7 @@ export default function ViagemProPage() {
       }
       ctaPrimaria={{
         label: "Falar com a gente",
-        href: "mailto:contato@luquisys.com.br?subject=Quero%20o%20ViagemPro",
+        href: "mailto:contato@luqsys.com.br?subject=Quero%20o%20ViagemPro",
       }}
       ctaSecundaria={{ label: "Ver planos", href: "#planos" }}
       passos={[
@@ -104,7 +104,7 @@ export default function ViagemProPage() {
       ]}
       ctaFinalTitulo="Sua próxima viagem planejada em minutos"
       ctaFinalTexto="Sem ficar 3 horas no Google Maps. A IA monta, você ajusta."
-    appUrl="https://viagempro.luquisys.com.br"
+    appUrl="https://viagempro.luqsys.com.br"
     assinarUrl="https://www.asaas.com/c/josachoczgkjobvf"
     />
   );

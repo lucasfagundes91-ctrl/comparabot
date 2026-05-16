@@ -22,7 +22,7 @@ export default function FrotaProPage() {
       }
       ctaPrimaria={{
         label: "Falar com a gente",
-        href: "mailto:contato@luquisys.com.br?subject=Quero%20o%20FrotaPro",
+        href: "mailto:contato@luqsys.com.br?subject=Quero%20o%20FrotaPro",
       }}
       ctaSecundaria={{ label: "Ver planos", href: "#planos" }}
       passos={[
@@ -106,7 +106,7 @@ export default function FrotaProPage() {
       ]}
       ctaFinalTitulo="Frota no controle, sem planilha"
       ctaFinalTexto="Você sabe quanto cada veículo está custando por KM rodado?"
-    appUrl="https://frotapro.luquisys.com.br"
+    appUrl="https://frotapro.luqsys.com.br"
     assinarUrl="https://www.asaas.com/c/q7naaqzljwdl3hxe"
     />
   );

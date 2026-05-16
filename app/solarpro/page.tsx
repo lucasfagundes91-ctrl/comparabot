@@ -22,7 +22,7 @@ export default function SolarProPage() {
       }
       ctaPrimaria={{
         label: "Falar com vendas",
-        href: "mailto:contato@luquisys.com.br?subject=Quero%20o%20SolarPro",
+        href: "mailto:contato@luqsys.com.br?subject=Quero%20o%20SolarPro",
       }}
       ctaSecundaria={{ label: "Ver planos", href: "#planos" }}
       passos={[
@@ -106,7 +106,7 @@ export default function SolarProPage() {
       ]}
       ctaFinalTitulo="Seu negócio solar organizado"
       ctaFinalTexto="Combine com PontoPro (instaladores) e ContabilidadePro pro fechamento."
-    appUrl="https://solarpro.luquisys.com.br"
+    appUrl="https://solarpro.luqsys.com.br"
     assinarUrl="https://www.asaas.com/c/wy6zkhm3k7otovzd"
     />
   );
