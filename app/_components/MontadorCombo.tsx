@@ -87,7 +87,7 @@ export function MontadorCombo() {
       `Quero contratar esse pacote.`
   );
   const mailto = `mailto:contato@luquisys.com.br?subject=${encodeURIComponent(
-    "Quero esse pacote Luquisys"
+    "Quero esse pacote Luqsys"
   )}&body=${mailtoBody}`;
 
   return (

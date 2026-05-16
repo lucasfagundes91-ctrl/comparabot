@@ -162,9 +162,9 @@ export default function Home() {
     <main className="radial-bg">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
         <div className="flex items-center gap-3">
-          <img src="/logo.svg" alt="Luquisys" className="h-9 w-9" />
+          <img src="/luqsys-logo.png" alt="Luqsys" className="h-10 w-10 rounded-lg" />
           <span className="text-sm font-semibold tracking-[0.2em] text-gold">
-            LUQUISYS
+            LUQSYS
           </span>
         </div>
         <div className="flex items-center gap-6 text-sm">
@@ -173,6 +173,9 @@ export default function Home() {
           </a>
           <a href="#bundles" className="text-neutral-400 transition hover:text-gold">
             Combos
+          </a>
+          <a href="#sob-medida" className="text-neutral-400 transition hover:text-gold">
+            Sob medida
           </a>
           <a
             href="mailto:contato@luquisys.com.br"
@@ -184,15 +187,15 @@ export default function Home() {
       </nav>
 
       <section className="mx-auto max-w-4xl px-6 pb-20 pt-16 text-center sm:pt-24">
-        <div className="mb-8 flex justify-center">
+        <div className="mb-6 flex justify-center">
           <img
-            src="/logo.svg"
-            alt="Luquisys"
-            className="h-24 w-24 drop-shadow-gold sm:h-32 sm:w-32"
+            src="/luqsys-logo.png"
+            alt="Luqsys — Sistemas de Gestão"
+            className="h-40 w-40 rounded-3xl drop-shadow-gold sm:h-52 sm:w-52"
           />
         </div>
         <h1 className="gold-gradient-text text-5xl font-black tracking-tight sm:text-7xl">
-          LUQUISYS
+          LUQSYS
         </h1>
         <p className="mt-4 text-xs tracking-[0.35em] text-gold-dim sm:text-sm">
           SISTEMAS DE GESTÃO EMPRESARIAL
@@ -353,6 +356,62 @@ export default function Home() {
         </div>
       </section>
 
+      <section
+        id="sob-medida"
+        className="mx-auto max-w-6xl border-t border-neutral-900 px-6 py-20"
+      >
+        <div className="rounded-3xl border border-gold-dim bg-gradient-to-br from-gold-dark/30 via-bg-card to-bg-card p-8 sm:p-12 shadow-gold">
+          <div className="grid items-center gap-8 lg:grid-cols-[1.2fr,1fr]">
+            <div>
+              <span className="inline-block rounded-full border border-gold-dim/60 bg-gold-dark/30 px-3 py-1 text-xs font-bold tracking-wider text-gold">
+                ✦ SOB MEDIDA
+              </span>
+              <h2 className="mt-4 text-3xl font-bold sm:text-4xl">
+                Não achou o sistema que você precisa?
+              </h2>
+              <p className="mt-4 text-base text-neutral-300 sm:text-lg">
+                Eu desenvolvo <strong className="text-white">sistema personalizado</strong>{" "}
+                pra sua operação — do zero ou adaptando um dos meus 12 que já
+                rodam. Mesmo padrão Luqsys: Flask + PostgreSQL, deploy próprio,
+                código seu.
+              </p>
+
+              <ul className="mt-6 grid gap-2 text-sm text-neutral-300 sm:grid-cols-2">
+                <li className="flex items-start gap-2">
+                  <span className="text-gold">✓</span> Levantamento gratuito por
+                  WhatsApp
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-gold">✓</span> Escopo + orçamento fechado
+                  antes de começar
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-gold">✓</span> Entrega em sprints (2 a 4
+                  semanas)
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-gold">✓</span> Hospedagem + suporte
+                  mensal opcional
+                </li>
+              </ul>
+            </div>
+
+            <div className="flex flex-col gap-3">
+              <a
+                href="mailto:contato@luquisys.com.br?subject=Quero%20um%20sistema%20personalizado&body=Oi%20Lucas%2C%20preciso%20de%20um%20sistema%20pra%3A%20%5Bdescreva%20o%20que%20voc%C3%AA%20precisa%5D"
+                className="rounded-full bg-gold px-7 py-4 text-center text-sm font-semibold text-bg transition hover:bg-gold-bright"
+              >
+                Pedir orçamento
+              </a>
+              <p className="text-center text-xs text-neutral-500">
+                Conta o que você precisa — respondo em até 24h com
+                proposta inicial.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="mx-auto max-w-3xl border-t border-neutral-900 px-6 py-20 text-center">
         <h2 className="text-3xl font-bold sm:text-4xl">
           Sistemas feitos pra <span className="gold-gradient-text">rodar</span>
@@ -378,7 +437,7 @@ export default function Home() {
       </section>
 
       <footer className="border-t border-neutral-900 px-6 py-10 text-center text-sm text-neutral-500">
-        <p>© {new Date().getFullYear()} Luquisys. Todos os direitos reservados.</p>
+        <p>© {new Date().getFullYear()} Luqsys. Todos os direitos reservados.</p>
         <p className="mt-1">luquisys.com.br</p>
       </footer>
     </main>

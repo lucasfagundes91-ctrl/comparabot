@@ -4,7 +4,7 @@ import { ProductLayout } from "../_components/ProductLayout";
 export const metadata: Metadata = {
   title: "ContabilidadePro — Software + acompanhamento contábil",
   description:
-    "Sistema contábil completo com acompanhamento humano de contador. PJ e PF, integração com seus outros sistemas Luquisys.",
+    "Sistema contábil completo com acompanhamento humano de contador. PJ e PF, integração com seus outros sistemas Luqsys.",
 };
 
 export default function ContabilidadeProPage() {
@@ -16,7 +16,7 @@ export default function ContabilidadeProPage() {
       descricao={
         <>
           Sistema contábil completo <strong className="text-white">com acompanhamento humano</strong>{" "}
-          de contador. PJ e PF, integração com seus outros sistemas Luquisys,
+          de contador. PJ e PF, integração com seus outros sistemas Luqsys,
           IRPF do dono e da família.
         </>
       }
@@ -47,7 +47,7 @@ export default function ContabilidadeProPage() {
       ]}
       features={[
         "PJ + PF (sócios e família)",
-        "Integração nativa com outros Luquisys",
+        "Integração nativa com outros Luqsys",
         "Contador dedicado por e-mail/WhatsApp",
         "DAS Simples Nacional mensal",
         "DCTFWeb e eSocial",
@@ -65,7 +65,7 @@ export default function ContabilidadeProPage() {
             "Software completo",
             "PJ + PF",
             "Lançamentos automáticos",
-            "Integração com sistemas Luquisys",
+            "Integração com sistemas Luqsys",
             "Lembretes de vencimento",
             "Suporte por e-mail",
           ],

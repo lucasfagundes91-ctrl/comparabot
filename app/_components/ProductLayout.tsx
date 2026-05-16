@@ -63,9 +63,9 @@ export function ProductLayout({
     <main className="radial-bg">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
         <Link href="/" className="flex items-center gap-3">
-          <img src="/logo.svg" alt="Luquisys" className="h-9 w-9" />
+          <img src="/luqsys-logo.png" alt="Luqsys" className="h-10 w-10 rounded-lg" />
           <span className="text-sm font-semibold tracking-[0.2em] text-gold">
-            LUQUISYS
+            LUQSYS
           </span>
         </Link>
         <div className="flex items-center gap-2 sm:gap-3">
@@ -121,7 +121,7 @@ export function ProductLayout({
 
       <section className="mx-auto max-w-4xl px-6 pb-16 pt-12 text-center sm:pt-20">
         <span className="inline-block rounded-full border border-gold-dim/60 bg-gold-dark/30 px-3 py-1 text-xs font-medium tracking-wider text-gold">
-          UM SISTEMA LUQUISYS
+          UM SISTEMA LUQSYS
         </span>
         <div className="mt-6 text-5xl">{icone}</div>
         <h1 className="mt-4 text-4xl font-black tracking-tight sm:text-6xl">
@@ -325,7 +325,7 @@ export function ProductLayout({
             <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <span className="inline-block rounded-full border border-gold-dim/60 bg-gold-dark/30 px-3 py-1 text-xs font-bold tracking-wider text-gold">
-                  BÔNUS LUQUISYS
+                  BÔNUS LUQSYS
                 </span>
                 <p className="mt-3 text-sm text-neutral-200 sm:text-base">
                   Assinando o {nome},{" "}
@@ -399,7 +399,7 @@ export function ProductLayout({
       <footer className="border-t border-neutral-900 px-6 py-10 text-center text-sm text-neutral-500">
         <p>
           <Link href="/" className="hover:text-gold">
-            Luquisys
+            Luqsys
           </Link>{" "}
           · {nome} · © {new Date().getFullYear()}
         </p>

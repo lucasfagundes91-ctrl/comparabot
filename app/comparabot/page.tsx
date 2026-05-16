@@ -46,9 +46,9 @@ export default function ComparaBot() {
     <main className="radial-bg">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
         <Link href="/" className="flex items-center gap-3">
-          <img src="/logo.svg" alt="Luquisys" className="h-9 w-9" />
+          <img src="/luqsys-logo.png" alt="Luqsys" className="h-10 w-10 rounded-lg" />
           <span className="text-sm font-semibold tracking-[0.2em] text-gold">
-            LUQUISYS
+            LUQSYS
           </span>
         </Link>
         <Link
@@ -61,7 +61,7 @@ export default function ComparaBot() {
 
       <section className="mx-auto max-w-4xl px-6 pb-16 pt-12 text-center sm:pt-20">
         <span className="inline-block rounded-full border border-gold-dim/60 bg-gold-dark/30 px-3 py-1 text-xs font-medium tracking-wider text-gold">
-          UM PRODUTO LUQUISYS
+          UM PRODUTO LUQSYS
         </span>
         <h1 className="mt-6 text-4xl font-black tracking-tight sm:text-6xl">
           <span className="gold-gradient-text">ComparaBot</span>
@@ -135,7 +135,7 @@ export default function ComparaBot() {
       <section id="planos" className="mx-auto max-w-5xl px-6 py-20">
         <h2 className="text-center text-3xl font-bold sm:text-4xl">Planos</h2>
         <p className="mt-3 text-center text-neutral-400">
-          Comece grátis. Assine quando precisar de mais — ou ganhe junto com outro sistema Luquisys.
+          Comece grátis. Assine quando precisar de mais — ou ganhe junto com outro sistema Luqsys.
         </p>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -219,20 +219,20 @@ export default function ComparaBot() {
           <div className="flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex-1">
               <span className="inline-block rounded-full border border-gold-dim/60 bg-gold-dark/30 px-3 py-1 text-xs font-bold tracking-wider text-gold">
-                BÔNUS LUQUISYS
+                BÔNUS LUQSYS
               </span>
               <h3 className="mt-4 text-2xl font-bold text-white sm:text-3xl">
-                Grátis pra clientes Luquisys
+                Grátis pra clientes Luqsys
               </h3>
               <p className="mt-3 max-w-xl text-sm leading-relaxed text-neutral-300 sm:text-base">
-                Assinando <strong className="text-gold">qualquer outro sistema da Luquisys</strong> (BankPro, PDV Pro, FarmPro, ObraPro, PontoPro e outros), o <strong className="text-white">ComparaBot Pro vem incluso sem custo extra</strong> — comparações ilimitadas no WhatsApp.
+                Assinando <strong className="text-gold">qualquer outro sistema da Luqsys</strong> (BankPro, PDV Pro, FarmPro, ObraPro, PontoPro e outros), o <strong className="text-white">ComparaBot Pro vem incluso sem custo extra</strong> — comparações ilimitadas no WhatsApp.
               </p>
             </div>
             <Link
               href="/#trilhas"
               className="shrink-0 rounded-full bg-gold px-7 py-3 text-sm font-semibold text-bg transition hover:bg-gold-bright"
             >
-              Ver sistemas Luquisys
+              Ver sistemas Luqsys
             </Link>
           </div>
         </div>
@@ -258,7 +258,7 @@ export default function ComparaBot() {
       <footer className="border-t border-neutral-900 px-6 py-10 text-center text-sm text-neutral-500">
         <p>
           <Link href="/" className="hover:text-gold">
-            Luquisys
+            Luqsys
           </Link>{" "}
           · ComparaBot · © {new Date().getFullYear()}
         </p>
