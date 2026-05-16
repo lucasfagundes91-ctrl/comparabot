@@ -33,6 +33,7 @@ export type ProductPageProps = {
   appUrl?: string;
   demoUrl?: string;
   trialUrl?: string;
+  assinarUrl?: string;
 };
 
 export function ProductLayout({
@@ -54,6 +55,7 @@ export function ProductLayout({
   appUrl,
   demoUrl,
   trialUrl,
+  assinarUrl,
 }: ProductPageProps) {
   const demoHref = demoUrl ?? (appUrl ? `${appUrl}/demo` : undefined);
   const trialHref = trialUrl ?? (appUrl ? `${appUrl}/cadastro?trial=1` : undefined);
@@ -184,6 +186,19 @@ export function ProductLayout({
             {trialHref
               ? "✦ Sem cartão de crédito · cancele quando quiser"
               : rodapeHero}
+          </p>
+        )}
+        {assinarUrl && (
+          <p className="mt-3 text-sm text-neutral-400">
+            Já decidiu?{" "}
+            <a
+              href={assinarUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-gold underline-offset-4 transition hover:text-gold-bright hover:underline"
+            >
+              Assinar agora →
+            </a>
           </p>
         )}
       </section>
