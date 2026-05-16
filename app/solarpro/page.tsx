@@ -69,8 +69,7 @@ export default function SolarProPage() {
             "Suporte por e-mail",
           ],
           ctaLabel: "Assinar Básico",
-          ctaHref:
-            "mailto:contato@luquisys.com.br?subject=Quero%20o%20SolarPro%20B%C3%A1sico",
+          ctaHref: "https://www.asaas.com/c/gvkazy8583uxptbj",
         },
         {
           nome: "Pro",
@@ -86,8 +85,7 @@ export default function SolarProPage() {
             "Suporte por e-mail",
           ],
           ctaLabel: "Assinar Pro",
-          ctaHref:
-            "mailto:contato@luquisys.com.br?subject=Quero%20o%20SolarPro",
+          ctaHref: "https://www.asaas.com/c/wy6zkhm3k7otovzd",
           destaque: true,
         },
         {
@@ -110,6 +108,7 @@ export default function SolarProPage() {
       ctaFinalTitulo="Seu negócio solar organizado"
       ctaFinalTexto="Combine com PontoPro (instaladores) e ContabilidadePro pro fechamento."
     appUrl="https://solarpro.luquisys.com.br"
+    assinarUrl="https://www.asaas.com/c/wy6zkhm3k7otovzd"
     />
   );
 }

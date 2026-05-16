@@ -70,8 +70,7 @@ export default function MilhasProPage() {
             "Suporte por e-mail",
           ],
           ctaLabel: "Assinar Básico",
-          ctaHref:
-            "mailto:contato@luquisys.com.br?subject=Quero%20o%20MilhasPro%20B%C3%A1sico",
+          ctaHref: "https://www.asaas.com/c/l5ukxyyofshxngh0",
         },
         {
           nome: "Pro",
@@ -85,8 +84,7 @@ export default function MilhasProPage() {
             "Suporte por e-mail",
           ],
           ctaLabel: "Assinar Pro",
-          ctaHref:
-            "mailto:contato@luquisys.com.br?subject=Quero%20o%20MilhasPro",
+          ctaHref: "https://www.asaas.com/c/q4ceriz467m31i85",
           destaque: true,
         },
         {
@@ -102,13 +100,13 @@ export default function MilhasProPage() {
             "Suporte prioritário",
           ],
           ctaLabel: "Assinar Família",
-          ctaHref:
-            "mailto:contato@luquisys.com.br?subject=Quero%20o%20MilhasPro%20Fam%C3%ADlia",
+          ctaHref: "https://www.asaas.com/c/nga96be8v36itedc",
         },
       ]}
       ctaFinalTitulo="Voe mais barato sem virar especialista"
       ctaFinalTexto="Suas milhas estão valendo a pena? O MilhasPro responde."
     appUrl="https://milhaspro.luquisys.com.br"
+    assinarUrl="https://www.asaas.com/c/q4ceriz467m31i85"
     />
   );
 }

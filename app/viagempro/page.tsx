@@ -68,8 +68,7 @@ export default function ViagemProPage() {
             "Suporte por e-mail",
           ],
           ctaLabel: "Assinar Básico",
-          ctaHref:
-            "mailto:contato@luquisys.com.br?subject=Quero%20o%20ViagemPro%20B%C3%A1sico",
+          ctaHref: "https://www.asaas.com/c/hx5di6wrxu4z7cfl",
         },
         {
           nome: "Pro",
@@ -84,8 +83,7 @@ export default function ViagemProPage() {
             "Suporte por e-mail",
           ],
           ctaLabel: "Assinar Pro",
-          ctaHref:
-            "mailto:contato@luquisys.com.br?subject=Quero%20o%20ViagemPro",
+          ctaHref: "https://www.asaas.com/c/josachoczgkjobvf",
           destaque: true,
         },
         {
@@ -101,13 +99,13 @@ export default function ViagemProPage() {
             "Suporte prioritário",
           ],
           ctaLabel: "Assinar Família",
-          ctaHref:
-            "mailto:contato@luquisys.com.br?subject=Quero%20o%20ViagemPro%20Fam%C3%ADlia",
+          ctaHref: "https://www.asaas.com/c/gbb4diiwxmg42cbx",
         },
       ]}
       ctaFinalTitulo="Sua próxima viagem planejada em minutos"
       ctaFinalTexto="Sem ficar 3 horas no Google Maps. A IA monta, você ajusta."
     appUrl="https://viagempro.luquisys.com.br"
+    assinarUrl="https://www.asaas.com/c/josachoczgkjobvf"
     />
   );
 }

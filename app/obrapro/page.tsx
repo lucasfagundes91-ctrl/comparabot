@@ -69,8 +69,7 @@ export default function ObraProPage() {
             "Suporte por e-mail",
           ],
           ctaLabel: "Assinar Básico",
-          ctaHref:
-            "mailto:contato@luquisys.com.br?subject=Quero%20o%20ObraPro%20B%C3%A1sico",
+          ctaHref: "https://www.asaas.com/c/9klwm6prnwg1bjk2",
         },
         {
           nome: "Pro",
@@ -86,8 +85,7 @@ export default function ObraProPage() {
             "Suporte por e-mail",
           ],
           ctaLabel: "Assinar Pro",
-          ctaHref:
-            "mailto:contato@luquisys.com.br?subject=Quero%20o%20ObraPro",
+          ctaHref: "https://www.asaas.com/c/gj85zr3wdfwp28vp",
           destaque: true,
         },
         {
@@ -110,6 +108,7 @@ export default function ObraProPage() {
       ctaFinalTitulo="Pare de furar o orçamento"
       ctaFinalTexto="Combine com ComparaBot pra cotar material antes de comprar."
     appUrl="https://obrapro.luquisys.com.br"
+    assinarUrl="https://www.asaas.com/c/gj85zr3wdfwp28vp"
     />
   );
 }

@@ -70,8 +70,7 @@ export default function PontoProPage() {
             "Suporte por e-mail",
           ],
           ctaLabel: "Assinar Básico",
-          ctaHref:
-            "mailto:contato@luquisys.com.br?subject=Quero%20o%20PontoPro%20B%C3%A1sico",
+          ctaHref: "https://www.asaas.com/c/67uk3ksmifuifly7",
         },
         {
           nome: "Pro",
@@ -87,8 +86,7 @@ export default function PontoProPage() {
             "Suporte por e-mail",
           ],
           ctaLabel: "Assinar Pro",
-          ctaHref:
-            "mailto:contato@luquisys.com.br?subject=Quero%20o%20PontoPro",
+          ctaHref: "https://www.asaas.com/c/a77msa0ndv1smwxn",
           destaque: true,
         },
         {
@@ -112,6 +110,7 @@ export default function PontoProPage() {
       ctaFinalTitulo="Ponto eletrônico sem dor de cabeça"
       ctaFinalTexto="Fiscalização do trabalho não vai te pegar de surpresa."
     appUrl="https://pontopro.luquisys.com.br"
+    assinarUrl="https://www.asaas.com/c/a77msa0ndv1smwxn"
     />
   );
 }

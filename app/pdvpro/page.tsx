@@ -72,8 +72,7 @@ export default function PDVProPage() {
             "Suporte por e-mail",
           ],
           ctaLabel: "Assinar Básico",
-          ctaHref:
-            "mailto:contato@luquisys.com.br?subject=Quero%20o%20PDV%20Pro%20B%C3%A1sico",
+          ctaHref: "https://www.asaas.com/c/jhpczcfk1jp2k82s",
         },
         {
           nome: "Pro",
@@ -88,8 +87,7 @@ export default function PDVProPage() {
             "Suporte por e-mail e WhatsApp",
           ],
           ctaLabel: "Assinar Pro",
-          ctaHref:
-            "mailto:contato@luquisys.com.br?subject=Quero%20o%20PDV%20Pro",
+          ctaHref: "https://www.asaas.com/c/l3c8v5dx1nh84z0k",
           destaque: true,
         },
         {
@@ -112,6 +110,7 @@ export default function PDVProPage() {
       ctaFinalTitulo="A loja inteira em um sistema só"
       ctaFinalTexto="Combine com ContabilidadePro e PontoPro pra um varejo 100% no controle."
     appUrl="https://pdvpro.luquisys.com.br"
+    assinarUrl="https://www.asaas.com/c/l3c8v5dx1nh84z0k"
     />
   );
 }

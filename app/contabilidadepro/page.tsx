@@ -70,8 +70,7 @@ export default function ContabilidadeProPage() {
             "Suporte por e-mail",
           ],
           ctaLabel: "Assinar Software",
-          ctaHref:
-            "mailto:contato@luquisys.com.br?subject=Quero%20o%20ContabilidadePro%20Software",
+          ctaHref: "https://www.asaas.com/c/alf8qiy9p8nazwx8",
         },
         {
           nome: "Pro",
@@ -86,8 +85,7 @@ export default function ContabilidadeProPage() {
             "Suporte WhatsApp prioritário",
           ],
           ctaLabel: "Assinar Pro",
-          ctaHref:
-            "mailto:contato@luquisys.com.br?subject=Quero%20o%20ContabilidadePro",
+          ctaHref: "https://www.asaas.com/c/4ugw3ktqktdu8kqt",
           destaque: true,
         },
         {
@@ -110,6 +108,7 @@ export default function ContabilidadeProPage() {
       ctaFinalTitulo="Pare de pagar dois lugares"
       ctaFinalTexto="Software + contador no mesmo pacote. Tudo conversando."
     appUrl="https://contabilidadepro.luquisys.com.br"
+    assinarUrl="https://www.asaas.com/c/alf8qiy9p8nazwx8"
     />
   );
 }

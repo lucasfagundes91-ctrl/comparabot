@@ -69,8 +69,7 @@ export default function FrotaProPage() {
             "Suporte por e-mail",
           ],
           ctaLabel: "Assinar Básico",
-          ctaHref:
-            "mailto:contato@luquisys.com.br?subject=Quero%20o%20FrotaPro%20B%C3%A1sico",
+          ctaHref: "https://www.asaas.com/c/a5ax24hq7f8iitdk",
         },
         {
           nome: "Pro",
@@ -86,8 +85,7 @@ export default function FrotaProPage() {
             "Suporte prioritário",
           ],
           ctaLabel: "Assinar Pro",
-          ctaHref:
-            "mailto:contato@luquisys.com.br?subject=Quero%20o%20FrotaPro",
+          ctaHref: "https://www.asaas.com/c/q7naaqzljwdl3hxe",
           destaque: true,
         },
         {
@@ -110,6 +108,7 @@ export default function FrotaProPage() {
       ctaFinalTitulo="Frota no controle, sem planilha"
       ctaFinalTexto="Você sabe quanto cada veículo está custando por KM rodado?"
     appUrl="https://frotapro.luquisys.com.br"
+    assinarUrl="https://www.asaas.com/c/q7naaqzljwdl3hxe"
     />
   );
 }

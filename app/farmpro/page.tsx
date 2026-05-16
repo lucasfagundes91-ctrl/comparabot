@@ -69,8 +69,7 @@ export default function FarmProPage() {
             "Suporte por e-mail",
           ],
           ctaLabel: "Assinar Básico",
-          ctaHref:
-            "mailto:contato@luquisys.com.br?subject=Quero%20o%20FarmPro%20B%C3%A1sico",
+          ctaHref: "https://www.asaas.com/c/zm541eavrb9qzi40",
         },
         {
           nome: "Pro",
@@ -86,8 +85,7 @@ export default function FarmProPage() {
             "Suporte por e-mail",
           ],
           ctaLabel: "Assinar Pro",
-          ctaHref:
-            "mailto:contato@luquisys.com.br?subject=Quero%20o%20FarmPro",
+          ctaHref: "https://www.asaas.com/c/8uvtsmwsprfokrd1",
           destaque: true,
         },
         {
@@ -110,6 +108,7 @@ export default function FarmProPage() {
       ctaFinalTitulo="A fazenda merece um sistema feito pra ela"
       ctaFinalTexto="Combine com SolarPro (se gera energia solar) e ContabilidadePro pro fechamento."
     appUrl="https://farmpro.luquisys.com.br"
+    assinarUrl="https://www.asaas.com/c/8uvtsmwsprfokrd1"
     />
   );
 }

@@ -69,8 +69,7 @@ export default function AluguelProPage() {
             "Suporte por e-mail",
           ],
           ctaLabel: "Assinar Básico",
-          ctaHref:
-            "mailto:contato@luquisys.com.br?subject=Quero%20o%20AluguelPro%20B%C3%A1sico",
+          ctaHref: "https://www.asaas.com/c/o10vzdh38yuwb2eo",
         },
         {
           nome: "Pro",
@@ -85,8 +84,7 @@ export default function AluguelProPage() {
             "Suporte por e-mail",
           ],
           ctaLabel: "Assinar Pro",
-          ctaHref:
-            "mailto:contato@luquisys.com.br?subject=Quero%20o%20AluguelPro",
+          ctaHref: "https://www.asaas.com/c/mhw1a1fe2i14hit6",
           destaque: true,
         },
         {
@@ -109,6 +107,7 @@ export default function AluguelProPage() {
       ctaFinalTitulo="Sua carteira de imóveis no controle"
       ctaFinalTexto="Combine com ContabilidadePro pro imposto certinho."
     appUrl="https://aluguelpro.luquisys.com.br"
+    assinarUrl="https://www.asaas.com/c/mhw1a1fe2i14hit6"
     />
   );
 }

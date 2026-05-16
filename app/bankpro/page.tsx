@@ -71,8 +71,7 @@ export default function BankProPage() {
             "Suporte por e-mail",
           ],
           ctaLabel: "Assinar Básico",
-          ctaHref:
-            "mailto:contato@luquisys.com.br?subject=Quero%20o%20BankPro%20B%C3%A1sico",
+          ctaHref: "https://www.asaas.com/c/vr2dp6vjh69del96",
         },
         {
           nome: "Pro",
